@@ -459,6 +459,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
 .badge.stroller-no { background: #f9dfd6; color: var(--red); border-color: #e9b6a4; }
 .badge.price { background: #fff; color: var(--ink-soft); border-color: var(--cream-2); }
 .badge.tip { background: #e4eaf4; color: #2f5277; border-color: #c6d3e6; }
+.badge.gf { background: #e3f1e8; color: var(--green); border-color: #b6dcbf; }
 
 .card-link {
   margin-top: auto;

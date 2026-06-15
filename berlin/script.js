@@ -142,6 +142,22 @@ const ZONES = [
         price: "9–16 € / Gericht",
         badges: ["Schnell & zentral"],
       },
+      {
+        name: "Beets & Roots (Friedrichstraße)",
+        mapsName: "Beets & Roots Friedrichstraße, Berlin",
+        desc: "Warme Bowls, knackige Salate und Power-Frühstück – frisch, ausgewogen und schnell. Vegane und glutenfreie Varianten sind klar gekennzeichnet. Ideal für eine leichte Mittagspause.",
+        lat: 52.5130, lng: 13.3885,
+        price: "9–14 € / Bowl",
+        badges: ["Gesund", "Bowls", "Glutenfrei"],
+      },
+      {
+        name: "Ishin (Mittelstraße)",
+        mapsName: "Ishin Mittelstraße, Berlin",
+        desc: "Frisches japanisches Sushi & Sashimi nahe Friedrichstraße, leicht und bekömmlich. Glutenfrei mit Tamari-Sojasauce auf Anfrage. Mittags faire Lunch-Sets.",
+        lat: 52.5170, lng: 13.3885,
+        price: "12–22 € / Gericht",
+        badges: ["Asiatisch", "Sushi", "Glutenfrei möglich"],
+      },
     ],
   },
 
@@ -228,6 +244,30 @@ const ZONES = [
         price: "11–19 € / Hauptgericht",
         badges: ["Biergarten an der Spree"],
       },
+      {
+        name: "Monsieur Vuong",
+        mapsName: "Monsieur Vuong, Berlin",
+        desc: "Kult-Vietnamese in Mitte mit kurzer, frischer Karte: dampfende Pho und Reisgerichte. Vieles ist auf Reisbasis und damit glutenfrei-freundlich. Lebhaft, schnell, gesund.",
+        lat: 52.5265, lng: 13.4085,
+        price: "9–14 € / Gericht",
+        badges: ["Asiatisch", "Vietnamesisch", "Glutenfrei möglich"],
+      },
+      {
+        name: "Daluma",
+        mapsName: "Daluma, Weinbergsweg, Berlin",
+        desc: "Superfood-Bowls, Smoothies und pflanzliche Gerichte aus Bio-Zutaten. Ein Großteil der Karte ist glutenfrei und vegan – frisch, leicht und farbenfroh.",
+        lat: 52.5300, lng: 13.4015,
+        price: "10–16 € / Bowl",
+        badges: ["Gesund", "Vegan", "Glutenfrei"],
+      },
+      {
+        name: "Cookies Cream",
+        mapsName: "Cookies Cream, Behrenstraße, Berlin",
+        desc: "Versteckte vegetarische Sterneküche (1 Michelin-Stern) nahe Gendarmenmarkt – kreativ und raffiniert. Glutenfreie Menüfolge auf Vorbestellung. Für einen besonderen Abend (reservieren).",
+        lat: 52.5155, lng: 13.3895,
+        price: "Menü ab 69 €",
+        badges: ["Vegetarisch", "Gehoben", "Reservieren"],
+      },
     ],
   },
 
@@ -310,6 +350,30 @@ const ZONES = [
         lat: 52.5018, lng: 13.4318,
         price: "6–14 € / Gericht",
         badges: ["Street Food", "Viel Auswahl"],
+      },
+      {
+        name: "The Bowl (Friedrichshain)",
+        mapsName: "The Bowl Friedrichshain, Berlin",
+        desc: "„Clean eating“ im hellen Ambiente: 100 % pflanzliche Bowls ohne raffinierten Zucker, viele davon glutenfrei. Leicht und nährstoffreich – nahe der East Side Gallery.",
+        lat: 52.5095, lng: 13.4490,
+        price: "11–16 € / Bowl",
+        badges: ["Gesund", "Vegan", "Glutenfrei"],
+      },
+      {
+        name: "Khwan (RAW-Gelände)",
+        mapsName: "Khwan Berlin, Revaler Straße",
+        desc: "Thailändisches BBQ & Streetfood, frisch über Holzkohle gegrillt, auf dem RAW-Gelände in Friedrichshain. Würzig und frisch statt fettig; viele Gerichte sind glutenfrei.",
+        lat: 52.5075, lng: 13.4530,
+        price: "9–18 € / Gericht",
+        badges: ["Asiatisch", "Street Food", "Glutenfrei möglich"],
+      },
+      {
+        name: "Beba im Gropius Bau",
+        mapsName: "Beba Gropius Bau, Berlin",
+        desc: "Levantinisch-mediterrane Küche im Gropius Bau (nahe Topographie des Terrors): viel Gemüse, Mezze und Bowls zum Teilen. Frisch, gesund und mit vielen glutenfreien Optionen.",
+        lat: 52.5065, lng: 13.3855,
+        price: "12–20 € / Gericht",
+        badges: ["Mediterran", "Gesund"],
       },
     ],
   },
@@ -394,6 +458,30 @@ const ZONES = [
         lat: 52.5375, lng: 13.4218,
         price: "9–18 € / Frühstück",
         badges: ["Frühstücks-Etagère"],
+      },
+      {
+        name: "Transit (Hackescher Markt)",
+        mapsName: "Transit Restaurant Rosenthaler Straße, Berlin",
+        desc: "Thailändisch-indonesische Tapas zum Teilen – viele kleine, leichte Gerichte auf Reisbasis. Ideal zum Probieren mit der Familie, vieles davon glutenfrei.",
+        lat: 52.5290, lng: 13.4010,
+        price: "4–9 € / kl. Gericht",
+        badges: ["Asiatisch", "Street Food", "Glutenfrei möglich"],
+      },
+      {
+        name: "Lucky Leek",
+        mapsName: "Lucky Leek, Kollwitzstraße, Berlin",
+        desc: "Vegane Feinschmecker-Küche im Kollwitzkiez, kreativ und saisonal. Glutenfreie Menüs sind auf Anfrage möglich. Schön für ein entspanntes Abendessen (reservieren).",
+        lat: 52.5365, lng: 13.4205,
+        price: "Menü ab 49 €",
+        badges: ["Vegan", "Glutenfrei", "Reservieren"],
+      },
+      {
+        name: "Kopps",
+        mapsName: "Kopps Berlin, Linienstraße",
+        desc: "Beliebtes veganes Restaurant nahe Hackescher Markt mit wechselnder Karte und gefeiertem veganem Brunch am Wochenende. Frisch, modern, mit glutenfreien Optionen.",
+        lat: 52.5285, lng: 13.4010,
+        price: "12–20 € / Gericht",
+        badges: ["Vegan", "Brunch"],
       },
     ],
   },
@@ -481,6 +569,30 @@ const ZONES = [
         lat: 52.5028, lng: 13.3270,
         price: "9–20 € / Gericht",
         badges: ["Ruhige Oase", "Gartenterrasse"],
+      },
+      {
+        name: "NENI Berlin (Bikini Berlin)",
+        mapsName: "NENI Berlin, Budapester Straße",
+        desc: "Israelisch-levantinische Küche zum Teilen im 10. Stock über dem Zoo – viel Gemüse, Hummus und Mezze, dazu toller Blick. Frisch und gesellig, mit glutenfreien Optionen.",
+        lat: 52.5060, lng: 13.3380,
+        price: "15–24 € / Gericht",
+        badges: ["Mediterran", "Gesund", "Glutenfrei", "Aussicht"],
+      },
+      {
+        name: "Madame Ngo",
+        mapsName: "Madame Ngo, Kantstraße, Berlin",
+        desc: "Moderne vietnamesische „Maison de Phở“ an der Kantstraße: aromatische Pho und Bún auf Reisnudel-Basis – vieles davon glutenfrei. Leicht und wärmend zugleich.",
+        lat: 52.5060, lng: 13.3150,
+        price: "11–18 € / Gericht",
+        badges: ["Asiatisch", "Vietnamesisch", "Glutenfrei möglich"],
+      },
+      {
+        name: "Spreegold (Ku'damm)",
+        mapsName: "Spreegold Kurfürstendamm, Berlin",
+        desc: "Gesunder Brunch, Bowls, Smoothies und Salate direkt am Ku'damm. Vegane und glutenfreie Gerichte sind auf der Karte markiert – gut für jede Tageszeit mit Kindern.",
+        lat: 52.5040, lng: 13.3290,
+        price: "9–16 € / Gericht",
+        badges: ["Gesund", "Bowls", "Glutenfrei"],
       },
     ],
   },
@@ -571,7 +683,8 @@ function renderCard(item, type) {
   }
   (item.badges || []).forEach((b) => {
     const tag = document.createElement("span");
-    tag.className = "badge tip";
+    // Glutenfrei-Hinweise grün hervorheben
+    tag.className = /glutenfrei/i.test(b) ? "badge gf" : "badge tip";
     tag.textContent = b;
     badgesEl.appendChild(tag);
   });
