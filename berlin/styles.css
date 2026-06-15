@@ -1,18 +1,18 @@
 /* ========== Variables ========== */
 :root {
-  --terra: #8b2e1f;
-  --terra-soft: #b8533f;
-  --cream: #faf5ee;
-  --cream-2: #f4ead9;
-  --ink: #1f1410;
-  --ink-soft: #5a4a44;
-  --gold: #c79a4a;
+  --terra: #1d3557;        /* Preußischblau (Primärfarbe) */
+  --terra-soft: #2f5277;   /* helleres Blau */
+  --cream: #f5f6f8;        /* kühles Off-White */
+  --cream-2: #e5e9f0;      /* helles Blaugrau */
+  --ink: #16202e;          /* Anthrazit */
+  --ink-soft: #51606f;     /* gedämpft */
+  --gold: #c9a227;         /* Messing-Gold (Quadriga) */
   --green: #2c6e49;
   --amber: #c97e1f;
   --red: #b1361b;
-  --shadow-sm: 0 2px 6px rgba(31, 20, 16, 0.06);
-  --shadow: 0 8px 24px rgba(31, 20, 16, 0.10);
-  --shadow-lg: 0 16px 48px rgba(31, 20, 16, 0.16);
+  --shadow-sm: 0 2px 6px rgba(16, 28, 44, 0.07);
+  --shadow: 0 8px 24px rgba(16, 28, 44, 0.12);
+  --shadow-lg: 0 16px 48px rgba(16, 28, 44, 0.18);
   --radius: 18px;
   --radius-sm: 12px;
   --serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
@@ -35,14 +35,36 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 a { color: inherit; text-decoration: none; }
 h1, h2, h3, h4, h5 { font-family: var(--serif); font-weight: 600; letter-spacing: 0.01em; margin: 0; }
 
+/* ========== Back link ========== */
+.backlink {
+  position: absolute;
+  top: clamp(1rem, 3vw, 1.6rem);
+  left: clamp(1rem, 4vw, 2rem);
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #eaf1fb;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.backlink:hover { background: rgba(255, 255, 255, 0.22); transform: translateX(-2px); }
+
 /* ========== Hero ========== */
 .hero {
   position: relative;
   background:
-    radial-gradient(1200px 600px at 80% -10%, rgba(255,210,160,0.55), transparent 60%),
-    radial-gradient(900px 500px at 0% 100%, rgba(139,46,31,0.18), transparent 60%),
-    linear-gradient(160deg, #2a1410 0%, #4a2017 45%, #6e2c1d 100%);
-  color: #fdf6ea;
+    radial-gradient(1200px 600px at 80% -10%, rgba(201,162,39,0.30), transparent 60%),
+    radial-gradient(900px 500px at 0% 100%, rgba(47,82,119,0.55), transparent 60%),
+    linear-gradient(160deg, #0e1a2c 0%, #1d3557 48%, #2f5277 100%);
+  color: #f1f5fb;
   padding: clamp(2.5rem, 8vw, 5rem) clamp(1.25rem, 5vw, 3rem) clamp(2rem, 6vw, 4rem);
   overflow: hidden;
 }
@@ -50,7 +72,7 @@ h1, h2, h3, h4, h5 { font-family: var(--serif); font-weight: 600; letter-spacing
   content: "";
   position: absolute; inset: 0;
   background:
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'><g fill='none' stroke='%23ffd9a8' stroke-width='0.6' opacity='0.08'><circle cx='300' cy='300' r='250'/><circle cx='300' cy='300' r='180'/><circle cx='300' cy='300' r='110'/></g></svg>") center/cover no-repeat;
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'><g fill='none' stroke='%23c9a227' stroke-width='0.7' opacity='0.10'><path d='M60 540 V120 M120 540 V120 M180 540 V120 M240 540 V120 M300 540 V120 M360 540 V120 M420 540 V120 M480 540 V120 M540 540 V120'/><path d='M40 120 H560 M40 110 H560' stroke-width='1.4'/></g></svg>") center/cover no-repeat;
   pointer-events: none;
 }
 .hero-inner { position: relative; max-width: 920px; margin: 0 auto; }
@@ -74,29 +96,29 @@ h1, h2, h3, h4, h5 { font-family: var(--serif); font-weight: 600; letter-spacing
   font-family: var(--serif);
   font-size: clamp(1.15rem, 2.5vw, 1.5rem);
   line-height: 1.4;
-  color: #f7e6cf;
+  color: #dbe6f4;
   margin: 0 0 2rem;
-  max-width: 32ch;
+  max-width: 34ch;
 }
 .hotel-card {
   display: flex;
   align-items: center;
   gap: 0.9rem;
-  background: rgba(253, 246, 234, 0.10);
+  background: rgba(241, 245, 251, 0.10);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(253, 246, 234, 0.20);
+  border: 1px solid rgba(241, 245, 251, 0.20);
   border-radius: var(--radius);
   padding: 0.8rem 1rem;
   max-width: 460px;
 }
 .hotel-icon { font-size: 1.6rem; line-height: 1; }
 .hotel-name { font-weight: 600; font-size: 1.05rem; }
-.hotel-addr { font-size: 0.88rem; color: #e9d4b3; }
+.hotel-addr { font-size: 0.88rem; color: #c3d2e6; }
 .hotel-card > div:nth-child(2) { flex: 1; }
 .hotel-link {
   background: var(--gold);
-  color: #2a1410;
+  color: #1a1305;
   font-weight: 600;
   font-size: 0.92rem;
   padding: 0.55rem 0.9rem;
@@ -104,7 +126,7 @@ h1, h2, h3, h4, h5 { font-family: var(--serif); font-weight: 600; letter-spacing
   white-space: nowrap;
   transition: transform 0.15s ease, background 0.15s ease;
 }
-.hotel-link:hover { background: #d9b06a; transform: translateY(-1px); }
+.hotel-link:hover { background: #ddb84e; transform: translateY(-1px); }
 .hotel-link:active { transform: translateY(0); }
 
 /* ========== Main ========== */
@@ -141,6 +163,42 @@ main { max-width: 1180px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
   margin-right: 0.5rem;
 }
 .intro-list strong { color: var(--ink); }
+
+/* ========== Logistik (Ankunft & Abreise) ========== */
+.logistics {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  margin: 0 auto 2.5rem;
+}
+@media (min-width: 720px) {
+  .logistics { grid-template-columns: 1fr 1fr; }
+}
+.logi-card {
+  background: linear-gradient(165deg, #ffffff 0%, #f3f6fb 100%);
+  border: 1px solid var(--cream-2);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius-sm);
+  padding: 1.2rem 1.3rem;
+  box-shadow: var(--shadow-sm);
+}
+.logi-card h3 {
+  font-size: 1.2rem;
+  color: var(--terra);
+  margin-bottom: 0.55rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logi-card .logi-time {
+  font-family: var(--sans);
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 0.95rem;
+}
+.logi-card p { margin: 0 0 0.5rem; font-size: 0.92rem; color: var(--ink-soft); }
+.logi-card p:last-child { margin-bottom: 0; }
+.logi-card strong { color: var(--ink); }
 
 /* ========== Zones ========== */
 .zones {
@@ -192,7 +250,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
   flex-direction: column;
   justify-content: flex-end;
   color: #fff;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(31,20,16,0.20) 55%, rgba(31,20,16,0.85) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(14,26,44,0.20) 55%, rgba(14,26,44,0.85) 100%);
 }
 .zone-tag {
   display: inline-block;
@@ -216,7 +274,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
 .zone-summary {
   margin: 0.3rem 0 0;
   font-size: 0.93rem;
-  color: #f4e6c9;
+  color: #e4ecf7;
   text-shadow: 0 1px 6px rgba(0,0,0,0.4);
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -254,7 +312,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
 .toggle-icon { transition: transform 0.25s ease; font-size: 0.7rem; }
 .zone-card.is-open .toggle-icon { transform: rotate(180deg); }
 .zone-card.is-open .toggle-text::before {
-  content: "Zone schließen";
+  content: "Tag schließen";
 }
 .zone-card.is-open .toggle-text { font-size: 0; }
 .zone-card.is-open .toggle-text::before { font-size: 0.88rem; }
@@ -338,7 +396,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
 
 .card-image-wrap {
   aspect-ratio: 16 / 10;
-  background: linear-gradient(135deg, var(--cream-2), #e8d8b9);
+  background: linear-gradient(135deg, var(--cream-2), #c9d4e4);
   overflow: hidden;
   position: relative;
 }
@@ -400,7 +458,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
 .badge.stroller-careful { background: #fbeed3; color: var(--amber); border-color: #f0d294; }
 .badge.stroller-no { background: #f9dfd6; color: var(--red); border-color: #e9b6a4; }
 .badge.price { background: #fff; color: var(--ink-soft); border-color: var(--cream-2); }
-.badge.tip { background: #ece6f7; color: #5b3a8e; border-color: #cfc1ea; }
+.badge.tip { background: #e4eaf4; color: #2f5277; border-color: #c6d3e6; }
 
 .card-link {
   margin-top: auto;

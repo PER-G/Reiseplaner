@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#8b2e1f" />
+  <meta name="description" content="Interaktiver Reiseführer Rom – 5 Tage, 5 fußläufige Zonen, mit Google-Maps-Links und Kinderwagen-Hinweisen." />
+  <title>Reiseführer Rom · 03.–08. Mai 2026</title>
+  <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏛️%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="hero">
+    <a class="backlink" href="../index.html">← Alle Reiseführer</a>
+    <div class="hero-inner">
+      <div class="kicker">03.–08. Mai 2026 · Familie mit Baby</div>
+      <h1>Roma</h1>
+      <p class="lead">Fünf entspannte Tage, fünf fußläufige Zonen.<br />Wählt jeden Morgen frei, wo es hingeht.</p>
+      <div class="hotel-card">
+        <div class="hotel-icon">🏨</div>
+        <div>
+          <div class="hotel-name">Merulana Inn</div>
+          <div class="hotel-addr">Via Merulana 19, Rom</div>
+        </div>
+        <a class="hotel-link" id="hotel-link" href="#" target="_blank" rel="noopener">Route&nbsp;→</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Wie funktioniert dieser Guide?</h2>
+      <ul class="intro-list">
+        <li><strong>Fünf Zonen</strong> – jede in sich fußläufig. Ihr entscheidet morgens, in welche ihr geht.</li>
+        <li><strong>Auf jede Karte tippen</strong> öffnet die Location direkt in Google&nbsp;Maps (iPhone).</li>
+        <li><strong>Kinderwagen-Hinweise</strong> stehen direkt auf jeder Karte. <span class="badge stroller-yes">🛒 ok</span> <span class="badge stroller-careful">⚠ Vorsicht</span> <span class="badge stroller-no">🤱 lieber Trage</span></li>
+        <li><strong>Zone öffnen</strong> → unten gibt es einen Button, der den ganzen Spaziergang als Google-Maps-Route mit Wegpunkten startet.</li>
+      </ul>
+    </section>
+
+    <section class="zones" id="zones"></section>
+
+    <template id="zone-template">
+      <article class="zone-card">
+        <div class="zone-image-wrap">
+          <img class="zone-image" alt="" loading="lazy" />
+          <div class="zone-overlay">
+            <div class="zone-tag"></div>
+            <h3 class="zone-title"></h3>
+            <p class="zone-summary"></p>
+          </div>
+        </div>
+        <div class="zone-meta">
+          <div class="zone-stats"></div>
+          <button class="zone-toggle" type="button">
+            <span class="toggle-text">Zone öffnen</span>
+            <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+        <div class="zone-body" hidden>
+          <div class="zone-section">
+            <h4>Sehenswürdigkeiten</h4>
+            <div class="cards sights"></div>
+          </div>
+          <div class="zone-section">
+            <h4>Essen &amp; Trinken</h4>
+            <div class="cards restaurants"></div>
+          </div>
+          <div class="zone-actions">
+            <a class="route-btn" target="_blank" rel="noopener">
+              <span>🗺️</span><span>Ganze Zone als Spaziergang in Google&nbsp;Maps</span>
+            </a>
+            <p class="route-hint">Startet am Hotel, läuft die Sehenswürdigkeiten ab, alles zu Fuß.</p>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <template id="card-template">
+      <article class="card">
+        <div class="card-image-wrap">
+          <img class="card-image" alt="" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <div class="card-head">
+            <h5 class="card-title"></h5>
+            <span class="card-type"></span>
+          </div>
+          <p class="card-desc"></p>
+          <div class="card-badges"></div>
+          <a class="card-link" target="_blank" rel="noopener">
+            <span class="card-link-icon">📍</span>
+            <span class="card-link-text">In Google&nbsp;Maps öffnen</span>
+          </a>
+        </div>
+      </article>
+    </template>
+
+    <section class="tips">
+      <h2>Allgemeine Hinweise</h2>
+      <div class="tip-grid">
+        <div class="tip">
+          <div class="tip-icon">🛒</div>
+          <h3>Kinderwagen</h3>
+          <p>Roms Bürgersteige sind oft uneben (Kopfsteinpflaster). Die Routen sind im Kern kinderwagentauglich – wo es hakt, steht es auf der Karte.</p>
+        </div>
+        <div class="tip">
+          <div class="tip-icon">🤱</div>
+          <h3>Trage</h3>
+          <p>Für Aussichtspunkte, Kuppeln und enge Treppen ist die Trage immer die bessere Wahl. Bei jeder Treppen-Warnung explizit empfohlen.</p>
+        </div>
+        <div class="tip">
+          <div class="tip-icon">🎟️</div>
+          <h3>Tickets</h3>
+          <p>Kolosseum &amp; Petersdom-Kuppel: vorab online Zeitfenster buchen. Sonst entfällt mit Baby viel Wartezeit.</p>
+        </div>
+        <div class="tip">
+          <div class="tip-icon">⏰</div>
+          <h3>Tagesrhythmus</h3>
+          <p>Vormittag plus früher Nachmittag fest verplant – später Nachmittag flexibel je nach Babylaune.</p>
+        </div>
+        <div class="tip">
+          <div class="tip-icon">👜</div>
+          <h3>Taschendiebe</h3>
+          <p>Trevi-Brunnen, Piazza Navona, Metro: Wertsachen vorne tragen, Wickelrucksack zu.</p>
+        </div>
+        <div class="tip">
+          <div class="tip-icon">🍕</div>
+          <h3>Preisniveau</h3>
+          <p>Hauptgerichte in den vorgeschlagenen Trattorien meist 10–18&nbsp;€. Pizza al taglio &amp; Eis: günstige Snack-Option zwischendurch.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Erstellt aus eurer Perplexity-Planung · Bilder: Wikimedia&nbsp;Commons · Karten: Google&nbsp;Maps</p>
+      <p class="footer-quote">«Tutte le strade portano a Roma.»</p>
+    </footer>
+  </main>
+
+  <script src="script.js?v=5"></script>
+</body>
+</html>

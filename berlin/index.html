@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1d3557" />
+  <meta name="description" content="Interaktiver Reiseführer Berlin – 5 Tage, 5 Gebiete, mit Google-Maps-Routen, Bahn-/Tram-Hinweisen und Kinderwagen-Tipps." />
+  <title>Reiseführer Berlin · 25.–29. Mai 2026</title>
+  <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🐻%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="hero">
+    <a class="backlink" href="../index.html">← Alle Reiseführer</a>
+    <div class="hero-inner">
+      <div class="kicker">25.–29. Mai 2026 · Familie mit Baby</div>
+      <h1>Berlin</h1>
+      <p class="lead">Fünf entspannte Tage, fünf Gebiete.<br />Wählt jeden Morgen frei, wo es hingeht.</p>
+      <div class="hotel-card">
+        <div class="hotel-icon">🏨</div>
+        <div>
+          <div class="hotel-name">Hotel Riu Plaza Berlin</div>
+          <div class="hotel-addr">Martin-Luther-Straße 1, 10777 Berlin (Schöneberg)</div>
+        </div>
+        <a class="hotel-link" id="hotel-link" href="#" target="_blank" rel="noopener">Route&nbsp;→</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Wie funktioniert dieser Guide?</h2>
+      <ul class="intro-list">
+        <li><strong>Fünf Gebiete</strong> – jedes in sich erkundbar. Ihr entscheidet morgens, in welches ihr geht.</li>
+        <li><strong>Auf jede Karte tippen</strong> öffnet die Location direkt in Google&nbsp;Maps (Handy).</li>
+        <li><strong>Fußläufig oder mit Bahn/Tram</strong> – auf jeder Zone steht oben ein Anreise-Hinweis. Prenzlauer Berg ist die klassische Straßenbahn-Zone (Tram&nbsp;M1/M10).</li>
+        <li><strong>Kinderwagen-Hinweise</strong> stehen auf jeder Karte. <span class="badge stroller-yes">🛒 ok</span> <span class="badge stroller-careful">⚠ Teils Stufen</span> <span class="badge stroller-no">🤱 lieber Trage</span></li>
+        <li><strong>Gebiet öffnen</strong> → unten startet ein Button die ganze Tour als Google-Maps-Route (zu Fuß bzw. mit Bahn/Tram).</li>
+      </ul>
+    </section>
+
+    <section class="logistics">
+      <div class="logi-card">
+        <h3>🛬 Tag 1 – Ankunft <span class="logi-time">Mo 25.05., 8:00 Uhr</span></h3>
+        <p>Landung 8:00&nbsp;Uhr am <strong>BER</strong>. Ins Hotel ca. 45–60&nbsp;Min: FEX/Regionalexpress bzw. S9/S45 (Umstieg z.&nbsp;B. Hauptbahnhof/Südkreuz) oder Taxi (~45&nbsp;Min, ~50&nbsp;€).</p>
+        <p>Check-in im Riu&nbsp;Plaza meist erst <strong>ab 15&nbsp;Uhr</strong> – Gepäck an der Rezeption lassen und direkt los.</p>
+        <p><strong>Empfehlung:</strong> lockerer Start in der <strong>City&nbsp;West</strong> (Gebiet 5, fußläufig ab Hotel) – Gedächtniskirche, Ku'damm, vielleicht der Zoo.</p>
+      </div>
+      <div class="logi-card">
+        <h3>🛫 Tag 5 – Abreise <span class="logi-time">Fr 29.05., 20:10 Uhr</span></h3>
+        <p>Rückflug 20:10&nbsp;Uhr. <strong>3&nbsp;Std. vorher am Flughafen</strong> = spätestens 17:10&nbsp;Uhr am BER.</p>
+        <p>Fahrt Hotel&nbsp;→&nbsp;BER ca. 45–60&nbsp;Min → spätestens <strong>16:00&nbsp;Uhr</strong> vom Hotel los. Koffer morgens an der Rezeption einlagern (Late&nbsp;Check-out anfragen).</p>
+        <p><strong>Empfehlung:</strong> vormittags noch ein letztes Gebiet, mittags Mittagessen, dann entspannt zum Flughafen.</p>
+      </div>
+    </section>
+
+    <section class="zones" id="zones"></section>
+
+    <template id="zone-template">
+      <article class="zone-card">
+        <div class="zone-image-wrap">
+          <img class="zone-image" alt="" loading="lazy" />
+          <div class="zone-overlay">
+            <div class="zone-tag"></div>
+            <h3 class="zone-title"></h3>
+            <p class="zone-summary"></p>
+          </div>
+        </div>
+        <div class="zone-meta">
+          <div class="zone-stats"></div>
+          <button class="zone-toggle" type="button">
+            <span class="toggle-text">Gebiet öffnen</span>
+            <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+        <div class="zone-body" hidden>
+          <div class="zone-section">
+            <h4>Sehenswürdigkeiten</h4>
+            <div class="cards sights"></div>
+          </div>
+          <div class="zone-section">
+            <h4>Essen &amp; Trinken</h4>
+            <div class="cards restaurants"></div>
+          </div>
+          <div class="zone-actions">
+            <a class="route-btn" target="_blank" rel="noopener">
+              <span>🚶</span><span>Als Spaziergang in Google&nbsp;Maps</span>
+            </a>
+            <p class="route-hint"></p>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <template id="card-template">
+      <article class="card">
+        <div class="card-image-wrap">
+          <img class="card-image" alt="" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <div class="card-head">
+            <h5 class="card-title"></h5>
+            <span class="card-type"></span>
+          </div>
+          <p class="card-desc"></p>
+          <div class="card-badges"></div>
+          <a class="card-link" target="_blank" rel="noopener">
+            <span class="card-link-icon">📍</span>
+            <span class="card-link-text">In Google&nbsp;Maps öffnen</span>
+          </a>
+        </div>
+      </article>
+    </template>
+
+    <section class="tips">
+      <h2>Allgemeine Hinweise</h2>
+      <div class="tip-grid">
+        <div class="tip">
+          <div class="tip-icon">🛒</div>
+          <h3>Kinderwagen</h3>
+          <p>Berlin ist überwiegend eben und kinderwagenfreundlich. Stolperfallen sind einzelne Kopfsteinpflaster-Höfe (Mitte, Prenzlauer Berg) – das steht jeweils auf der Karte.</p>
+        </div>
+        <div class="tip">
+          <div class="tip-icon">🚇</div>
+          <h3>BVG-Ticket</h3>
+          <p>U-/S-Bahn, Tram und Bus mit demselben Ticket. Für 5 Tage lohnt sich eine 7-Tage-Karte (Tarifbereich AB; für den Flughafen BER ABC). Kinder unter 6 fahren frei.</p>
+        </div>
+        <div class="tip">
+          <div class="tip-icon">🚊</div>
+          <h3>Straßenbahn</h3>
+          <p>Trams gibt es vor allem im Ostteil (Mitte, Prenzlauer Berg, Friedrichshain). Die M1 und M10 sind eure Linien rund um Hackescher Markt und Mauerpark.</p>
+        </div>
+        <div class="tip">
+          <div class="tip-icon">🎟️</div>
+          <h3>Tickets</h3>
+          <p>Reichstagskuppel (kostenlos, Anmeldepflicht!), Fernsehturm, Zoo und Museumsinsel vorab online mit Zeitfenster buchen – spart mit Baby viel Wartezeit.</p>
+        </div>
+        <div class="tip">
+          <div class="tip-icon">🏛️</div>
+          <h3>Pergamon zu</h3>
+          <p>Das Pergamonmuseum ist bis voraussichtlich 2027 wegen Sanierung geschlossen. Offen bleiben auf der Museumsinsel u.&nbsp;a. Neues Museum (Nofretete) und Alte Nationalgalerie.</p>
+        </div>
+        <div class="tip">
+          <div class="tip-icon">🌭</div>
+          <h3>Preisniveau</h3>
+          <p>Currywurst &amp; Imbiss 3–8&nbsp;€, solide Hauptgerichte 10–20&nbsp;€. Berlin ist günstiger als Rom – und überall gibt es schnelle, familientaugliche Snacks.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Erstellt im Stil des Rom-Guides · Bilder: Wikimedia&nbsp;Commons · Karten: Google&nbsp;Maps</p>
+      <p class="footer-quote">«Berlin ist immer im Werden und nie im Sein.»</p>
+    </footer>
+  </main>
+
+  <script src="script.js?v=1"></script>
+</body>
+</html>
