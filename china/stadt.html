@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#a8322a" />
+  <meta name="description" content="Stadt-Reiseführer der China-Rundreise 2026 – Gebiete, Sehenswürdigkeiten, Kinderwagen-Hinweise und Karten-Links." />
+  <title>Stadt · Reiseführer China</title>
+  <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏮%3C/text%3E%3C/svg%3E" />
+</head>
+<body data-page="city">
+  <header class="hero">
+    <a class="backlink" href="index.html">← Alle Städte</a>
+    <div class="hero-inner">
+      <div class="kicker"></div>
+      <h1></h1>
+      <span class="hero-cn"></span>
+      <p class="lead"></p>
+      <div class="hotel-card">
+        <div class="hotel-icon">🏨</div>
+        <div>
+          <div class="hotel-name"></div>
+          <div class="hotel-addr"></div>
+          <div class="hotel-extra">
+            <div>👶 <span id="hotel-why"></span></div>
+            <div>🚉 <span id="hotel-transfer"></span></div>
+            <div>💶 <span id="hotel-price"></span></div>
+          </div>
+        </div>
+        <a class="hotel-link" id="hotel-link" href="#" target="_blank" rel="noopener">Karte&nbsp;→</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Euer Aufenthalt · <span id="nights-label"></span></h2>
+      <p id="city-intro"></p>
+      <ul class="intro-list">
+        <li><strong>Gebiet öffnen</strong> → Sehenswürdigkeiten, Essen und eine fertige Route.</li>
+        <li><strong>Apple Karten</strong> ist der rote Button – er funktioniert auf dem Festland ohne VPN.</li>
+        <li><strong>Kinderwagen-Hinweise</strong> stehen auf jeder Karte, ebenso Ticket-Links.</li>
+      </ul>
+    </section>
+
+    <section class="zones" id="zones"></section>
+
+    <template id="zone-template">
+      <article class="zone-card">
+        <div class="zone-image-wrap">
+          <img class="zone-image" alt="" loading="lazy" />
+          <div class="zone-overlay">
+            <div class="zone-tag"></div>
+            <h3 class="zone-title"></h3>
+            <p class="zone-summary"></p>
+          </div>
+        </div>
+        <div class="zone-meta">
+          <div class="zone-stats"></div>
+          <button class="zone-toggle" type="button">
+            <span class="toggle-text">Gebiet öffnen</span>
+            <span class="toggle-icon">▾</span>
+          </button>
+        </div>
+        <div class="zone-body" hidden>
+          <div class="zone-section">
+            <h4>Sehenswürdigkeiten</h4>
+            <div class="cards sights"></div>
+          </div>
+          <div class="zone-section">
+            <h4>Essen &amp; Trinken</h4>
+            <div class="cards restaurants"></div>
+          </div>
+          <div class="zone-actions">
+            <div class="route-buttons">
+              <a class="route-btn apple" target="_blank" rel="noopener">
+                <span class="route-icon">🚶</span><span>Route in Apple&nbsp;Karten</span>
+              </a>
+              <a class="route-btn google" target="_blank" rel="noopener">
+                <span>🗺️</span><span>Alle Stopps in Google&nbsp;Maps</span>
+              </a>
+            </div>
+            <p class="route-hint"></p>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <template id="card-template">
+      <article class="card">
+        <div class="card-image-wrap">
+          <img class="card-image" alt="" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <div class="card-head">
+            <h5 class="card-title"></h5>
+            <span class="card-type"></span>
+          </div>
+          <span class="card-cn"></span>
+          <p class="card-desc"></p>
+          <div class="card-badges"></div>
+          <div class="card-links">
+            <a class="card-link apple" target="_blank" rel="noopener">🍎 Apple&nbsp;Karten</a>
+            <a class="card-link google" target="_blank" rel="noopener">📍 Google&nbsp;Maps</a>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <nav class="city-nav" id="city-nav"></nav>
+
+    <footer class="footer">
+      <p>Bilder: Wikimedia&nbsp;Commons · Karten: Apple&nbsp;Karten &amp; Google&nbsp;Maps</p>
+      <p class="footer-quote">一路平安 – Gute Reise!</p>
+    </footer>
+  </main>
+
+  <script src="data.js?v=1"></script>
+  <script src="app.js?v=1"></script>
+</body>
+</html>
