@@ -728,6 +728,63 @@ main { max-width: 1180px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
   margin-bottom: 0.5rem;
   transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
+/* ========== Wissenswertes (aufklappbar je Karte) ========== */
+.facts {
+  background: #fff;
+  border: 1px solid var(--cream-2);
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.6rem;
+  overflow: hidden;
+}
+.facts > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--terra);
+  list-style: none;
+  transition: background 0.15s ease;
+}
+.facts > summary::-webkit-details-marker { display: none; }
+.facts > summary::marker { content: ""; }
+.facts > summary:hover { background: #f0f7f8; }
+.facts > summary:focus-visible { outline: 2px solid var(--terra); outline-offset: -2px; }
+.facts-icon { font-size: 0.9rem; line-height: 1; }
+.facts-title { flex: 1; }
+.facts-chevron { font-size: 0.7rem; transition: transform 0.25s ease; }
+.facts[open] > summary .facts-chevron { transform: rotate(180deg); }
+.facts[open] > summary { border-bottom: 1px solid var(--cream-2); }
+.facts-body { padding: 0.75rem; }
+.facts-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.facts-text {
+  margin: 0 0 0.7rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.facts-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--terra);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+  transition: color 0.15s ease;
+}
+.facts-link:hover { color: var(--terra-soft); }
+
 .card-ticket:hover { background: var(--terra); color: #fff; transform: translateY(-1px); }
 .card-ticket:active { transform: translateY(0); }
 .card-ticket span:first-child { font-size: 1rem; }

@@ -645,6 +645,128 @@ const ZONES = [
 ];
 
 /* ============================================================
+   WISSENSWERTES
+   Kurzer Hintergrundartikel je Ziel, Schlüssel = Name der
+   Sehenswürdigkeit. Felder: text, url (zum Nachlesen), image (optional)
+   ============================================================ */
+const FACTS = {
+  "Donaukorso & Kettenbrücke": {
+    text: "Bis 1849 gab es keine feste Brücke zwischen Buda und Pest – im Winter kam man nur über das Eis hinüber, bei Treibeis gar nicht. Graf István Széchenyi trieb den Bau an, nachdem er angeblich acht Tage lang nicht zur Beerdigung seines Vaters gelangen konnte. Um die Löwen an den Brückenköpfen rankt sich bis heute das Gerücht, der Bildhauer habe die Zungen vergessen – tatsächlich sind sie vorhanden, nur von unten nicht zu sehen.",
+    url: "https://de.wikipedia.org/wiki/Sz%C3%A9chenyi-Kettenbr%C3%BCcke",
+  },
+  "St.-Stephans-Basilika": {
+    text: "Die Basilika ist exakt 96 Meter hoch – genau wie die Kuppel des Parlaments. Das ist kein Zufall: Eine Bauvorschrift untersagt in Budapest höhere Gebäude, weltliche und geistliche Macht sollen auf Augenhöhe stehen. Die Zahl verweist auf das Jahr 896, die ungarische Landnahme. In einer Seitenkapelle wird die „Heilige Rechte“ aufbewahrt, die mumifizierte rechte Hand von Staatsgründer Stephan I.",
+    url: "https://de.wikipedia.org/wiki/St.-Stephans-Basilika_(Budapest)",
+  },
+  "Parlament (Országház)": {
+    text: "Mit 268 Metern Länge und 691 Räumen ist es das größte Gebäude Ungarns – errichtet 1885–1904 für ein Land, das damals ein Vielfaches seiner heutigen Fläche umfasste. Verbaut wurden rund 40 Millionen Ziegel und etwa 40 Kilogramm Gold. Unter der Kuppel liegt die Stephanskrone, bewacht von zwei Gardisten; dort darf nicht fotografiert werden.",
+    url: "https://de.wikipedia.org/wiki/Parlamentsgeb%C3%A4ude_(Budapest)",
+  },
+  "Schuhe am Donauufer": {
+    text: "Das Mahnmal von 2005 erinnert an Juden, die 1944/45 von Pfeilkreuzlern am Ufer erschossen und in die Donau gestoßen wurden. Sie mussten vorher ihre Schuhe ausziehen – Leder war im Krieg ein wertvoller Rohstoff. Die 60 Paar aus Eisen sind originalgetreu im Stil der 1940er-Jahre gefertigt: Männer-, Frauen- und Kinderschuhe, manche achtlos hingeworfen, andere ordentlich nebeneinander.",
+    url: "https://de.wikipedia.org/wiki/Schuhe_am_Donauufer",
+  },
+  "Vörösmarty tér & Váci utca": {
+    text: "Die Váci utca ist seit dem 18. Jahrhundert die Hauptgeschäftsstraße von Pest. Unter dem Vörösmarty tér endet die M1 von 1896 – die erste elektrische Untergrundbahn des europäischen Festlands, gebaut für die Millenniumsfeiern. Sie ist heute UNESCO-Welterbe, fährt nur wenige Meter unter der Oberfläche und hat ihre historische Gestaltung mit Holz und Gusseisen behalten.",
+    url: "https://de.wikipedia.org/wiki/V%C3%A1ci_utca",
+  },
+  "Budavári Sikló (Standseilbahn)": {
+    text: "Die Standseilbahn von 1870 war eine der ersten der Welt und wurde ursprünglich gebaut, damit Beamte bequem zu ihren Büros im Burgpalast kamen. Im Zweiten Weltkrieg wurde sie völlig zerstört und erst 1986 wieder aufgebaut. Die Fahrt dauert keine zwei Minuten und überwindet dabei rund 50 Höhenmeter.",
+    url: "https://de.wikipedia.org/wiki/Budav%C3%A1ri_Sikl%C3%B3",
+  },
+  "Burgpalast (Budavári Palota)": {
+    text: "Der Palast wurde in seiner Geschichte mehrfach zerstört und wieder aufgebaut – zuletzt 1945, als sich hier deutsche und sowjetische Truppen wochenlange Häuserkämpfe lieferten. Bei der Enttrümmerung stieß man auf Teile der mittelalterlichen Burg von König Matthias Corvinus, die man längst für verloren gehalten hatte. Heute beherbergt der Komplex die Nationalgalerie und die Széchenyi-Nationalbibliothek.",
+    url: "https://de.wikipedia.org/wiki/Burgpalast",
+  },
+  "Ungarische Nationalgalerie": {
+    text: "Die Sammlung zeigt, wie eigenständig die ungarische Moderne war: Pál Szinyei Merse malte sein impressionistisches „Picknick im Mai“ bereits 1873 – zeitgleich mit den Franzosen, ohne deren Werke je gesehen zu haben. Der eigenwilligste Fall ist Tivadar Csontváry, ein Apotheker, der erst mit über vierzig zu malen begann und heute als ungarischer Nationalmaler gilt.",
+    url: "https://de.wikipedia.org/wiki/Ungarische_Nationalgalerie",
+  },
+  "Matthiaskirche": {
+    text: "Offiziell heißt sie Liebfrauenkirche; den Namen Matthiaskirche trägt sie nach König Matthias Corvinus, der hier zweimal heiratete. Während der Osmanenherrschaft diente sie rund 145 Jahre lang als Moschee. Das bunte Dach aus Zsolnay-Keramik kam erst bei der großen Restaurierung im 19. Jahrhundert dazu – die frostfeste Glasur war damals eine Erfindung der Manufaktur in Pécs.",
+    url: "https://de.wikipedia.org/wiki/Matthiaskirche_(Budapest)",
+  },
+  "Fischerbastei": {
+    text: "Trotz des wehrhaften Aussehens hat die Fischerbastei nie der Verteidigung gedient – sie wurde 1895–1902 von Frigyes Schulek rein als Aussichtsterrasse gebaut. Die sieben Türme stehen für die sieben magyarischen Stämme, die 896 das Karpatenbecken besiedelten. Ihren Namen trägt sie, weil im Mittelalter die Fischerzunft diesen Abschnitt der Stadtmauer zu verteidigen hatte.",
+    url: "https://de.wikipedia.org/wiki/Fischerbastei",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b5/Budapest_panorama_from_fisherman%27s_bastion.jpg",
+  },
+  "Große Markthalle": {
+    text: "Die 1897 eröffnete Halle war für ihre Zeit Hochtechnologie: Ein eigener Kanal führte von der Donau unter das Gebäude, damit Waren per Schiff direkt angeliefert werden konnten. Das Dach trägt farbige Zsolnay-Ziegel. Nach schweren Kriegsschäden und Jahrzehnten des Verfalls wurde sie 1994 vollständig restauriert wiedereröffnet.",
+    url: "https://de.wikipedia.org/wiki/Gro%C3%9Fe_Markthalle",
+  },
+  "Dohány-Synagoge": {
+    text: "Mit rund 3.000 Plätzen ist sie die größte Synagoge Europas. Der maurisch-byzantinische Stil war im 19. Jahrhundert bewusst gewählt. Im Hof steht Imre Vargas Trauerweide aus Metall: Auf jedem ihrer Blätter steht der Name eines Holocaust-Opfers. Im Nachbarhaus wurde 1860 Theodor Herzl geboren, der Begründer des politischen Zionismus.",
+    url: "https://de.wikipedia.org/wiki/Gro%C3%9Fe_Synagoge_(Budapest)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Budapest_-_A_holokauszt_%C3%A1ldozatainak_eml%C3%A9km%C5%B1ve_%2838404557112%29.jpg/1280px-Budapest_-_A_holokauszt_%C3%A1ldozatainak_eml%C3%A9km%C5%B1ve_%2838404557112%29.jpg",
+  },
+  "Szimpla Kert (Ruinenbar)": {
+    text: "2002 mietete eine Gruppe Freunde ein leerstehendes, verfallenes Mietshaus im alten jüdischen Viertel und möblierte es mit Sperrmüll – daraus wurde die erste „Ruinenkneipe“ und ein weltweit kopiertes Konzept. Möglich war das, weil das Viertel nach dem Krieg jahrzehntelang vernachlässigt wurde und viele Eigentumsfragen ungeklärt blieben. Sonntagvormittags findet hier heute ein Bauernmarkt statt.",
+    url: "https://en.wikipedia.org/wiki/Szimpla_Kert",
+  },
+  "Freiheitsbrücke": {
+    text: "Bis 1945 hieß sie Franz-Josephs-Brücke – der Kaiser schlug 1896 persönlich den letzten, versilberten Niet ein, der bis heute markiert ist. Auf den vier Masten sitzen Turul-Vögel, die mythischen Raubvögel der ungarischen Gründungssage. Sie war nach dem Zweiten Weltkrieg die erste Donaubrücke, die wieder aufgebaut wurde.",
+    url: "https://de.wikipedia.org/wiki/Freiheitsbr%C3%BCcke_(Budapest)",
+  },
+  "Gellért-Bad": {
+    text: "Schon die Osmanen nutzten die heißen Quellen an dieser Stelle. Das heutige Jugendstilbad entstand mitten im Ersten Weltkrieg (1912–1918); die Majolika stammt von der Manufaktur Zsolnay aus Pécs. Das Wellenbad im Außenbereich von 1927 war eines der ersten seiner Art weltweit.",
+    url: "https://de.wikipedia.org/wiki/Hotel_Gell%C3%A9rt",
+  },
+  "Gellértberg": {
+    text: "Der Berg ist nach Bischof Gerhard (ungarisch Gellért) benannt, der 1046 bei einem Heidenaufstand der Legende nach in einem Fass den Felsen hinab in die Donau gestoßen wurde. Im Inneren des Berges liegt die Felsenkapelle, eine in den Stein gehauene Kirche: Die Kommunisten mauerten sie 1951 zu, erst 1989 wurde sie wieder geöffnet.",
+    url: "https://de.wikipedia.org/wiki/Gell%C3%A9rtberg",
+  },
+  "Zitadelle (neu eröffnet)": {
+    text: "Die Habsburger errichteten die Festung 1851 nach dem niedergeschlagenen Freiheitskampf – ausdrücklich so, dass die Kanonen auf die eigene Stadt gerichtet werden konnten. Entsprechend verhasst war sie bei den Budapestern. 1894 wurde sie der Stadt übergeben, die symbolisch ein Stück der Mauer schleifen ließ. Nach elf Jahren Sperrung ist sie seit März 2026 wieder zugänglich.",
+    url: "https://de.wikipedia.org/wiki/Zitadelle_(Budapest)",
+  },
+  "Freiheitsstatue": {
+    text: "Die 14 Meter hohe Figur wurde 1947 als sowjetisches Befreiungsdenkmal errichtet. Nach 1989 entfernte man den Rotarmisten am Sockel und die Inschrift – die Frau mit dem Palmwedel blieb und ist heute all jenen gewidmet, die ihr Leben für Ungarns Unabhängigkeit und Freiheit gaben. Die abgeräumten Figuren stehen im Memento Park am Stadtrand.",
+    url: "https://de.wikipedia.org/wiki/Freiheitsstatue_(Budapest)",
+  },
+  "Ludwig Museum (MÜPA)": {
+    text: "Die Sammlung geht auf den Aachener Schokoladenfabrikanten Peter Ludwig zurück, der ab den 1980er-Jahren mehrere Museen in Europa mit Gegenwartskunst ausstattete – Budapest erhielt seine Dauerleihgabe noch vor dem Mauerfall. Seit 2005 sitzt das Museum im Müpa, dessen Konzertsaal zu den akustisch besten Europas zählt.",
+    url: "https://de.wikipedia.org/wiki/M%C3%BCpa_Budapest",
+  },
+  "Heldenplatz (Hősök tere)": {
+    text: "Der Platz entstand 1896 zur Millenniumsfeier. Auf der Kolonnade standen ursprünglich auch Habsburgerherrscher – sie wurden nach 1945 durch ungarische Freiheitskämpfer ersetzt. Im Juni 1989 versammelten sich hier rund 250.000 Menschen zur Umbettung von Imre Nagy, dem hingerichteten Ministerpräsidenten des Aufstands von 1956. Es war einer der Schlüsselmomente der ungarischen Wende.",
+    url: "https://de.wikipedia.org/wiki/Heldenplatz_(Budapest)",
+  },
+  "Vajdahunyad-Burg": {
+    text: "1896 stand hier nur eine Kulisse aus Holz und Pappe – ein Architektur-Potpourri, das über zwanzig ungarische Bauwerke zitierte, von romanisch über gotisch bis barock. Sie kam so gut an, dass man sie wenige Jahre später in Stein nachbaute. Im Hof sitzt die Kapuzenfigur „Anonymus“, der namenlose Chronist des Königs; sein Federkiel ist blank poliert, weil Studenten ihn vor Prüfungen anfassen.",
+    url: "https://de.wikipedia.org/wiki/Burg_Vajdahunyad",
+  },
+  "Haus der Ungarischen Musik": {
+    text: "Der Entwurf des Japaners Sou Fujimoto setzte sich in einem Wettbewerb gegen rund 170 Einsendungen durch. Das schwebende Dach ist von etwa hundert Löchern durchbrochen, durch die Bäume hindurchwachsen; an seiner Unterseite glitzern rund 30.000 goldene Blätter. Die Glasfassade ist stellenweise gemustert, damit Vögel sie erkennen und nicht dagegen fliegen.",
+    url: "https://de.wikipedia.org/wiki/Haus_der_Musik_Budapest",
+  },
+  "Ethnographisches Museum": {
+    text: "Das 2022 eröffnete Haus liegt zu großen Teilen unter der Erde – oberirdisch sieht man vor allem die geschwungene, begehbare Dachwiese, die wie eine Schlucht aus dem Park aufsteigt. Die Fassade besteht aus hunderttausenden Metallgitter-„Pixeln“, die Volkskunstmuster abbilden. Die Sammlung gehört mit weit über 200.000 Objekten zu den größten ihrer Art in Europa.",
+    url: "https://de.wikipedia.org/wiki/Ethnografisches_Museum_Budapest",
+  },
+  "Széchenyi-Thermalbad": {
+    text: "Das Wasser stammt aus über 1.200 Metern Tiefe und tritt mit rund 74 °C aus – die Quelle wurde 1879 bei einer Bohrung entdeckt. Mit 18 Becken ist es einer der größten Badekomplexe Europas. Die Schachspieler, die im dampfenden Außenbecken über ihren Brettern sitzen, sind keine Inszenierung für Touristen, sondern seit Jahrzehnten Alltag.",
+    url: "https://de.wikipedia.org/wiki/Sz%C3%A9chenyi-Heilbad",
+  },
+  "Ungarische Staatsoper": {
+    text: "Kaiser Franz Joseph finanzierte den Bau unter einer Bedingung: Das Haus dürfe nicht größer werden als die Wiener Oper. Architekt Miklós Ybl hielt sich daran – machte es dafür prunkvoller. Gustav Mahler war hier von 1888 bis 1891 Direktor. Nach fünf Jahren Restaurierung ist die Oper seit 2022 wieder geöffnet; ihre Akustik gilt als eine der besten Europas.",
+    url: "https://de.wikipedia.org/wiki/Ungarische_Staatsoper",
+  },
+  "Andrássy út": {
+    text: "Die Prachtstraße entstand 1872–1885 und ist seit 2002 UNESCO-Welterbe. Weil oberirdische Bahnen auf ihr verboten waren, verlegte man die Strecke kurzerhand darunter – so entstand 1896 die M1, die erste U-Bahn des europäischen Festlands. Die Hausnummer 60 war erst Sitz der Pfeilkreuzler, dann der kommunistischen Geheimpolizei; heute ist dort das Museum „Haus des Terrors“.",
+    url: "https://de.wikipedia.org/wiki/Andr%C3%A1ssy_%C3%BAt",
+  },
+  "Museum der Bildenden Künste": {
+    text: "Das Museum besitzt nach Madrid die zweitgrößte El-Greco-Sammlung der Welt. 1983 wurden sieben Meisterwerke gestohlen, darunter zwei Raffaels – sie tauchten wenige Wochen später in Griechenland wieder auf, der spektakulärste Kunstraub der ungarischen Geschichte. Vom 28.10.2026 bis Februar 2027 läuft hier „Bonjour Monsieur Gauguin!“ mit rund 150 Werken.",
+    url: "https://de.wikipedia.org/wiki/Sz%C3%A9pm%C5%B1v%C3%A9szeti_M%C3%BAzeum",
+  },
+  "Margareteninsel": {
+    text: "Benannt ist die Insel nach Margarete, der Tochter König Bélas IV.: Nach dem Mongolensturm von 1241/42 gelobte er, sie Gott zu weihen – sie lebte hier im Dominikanerinnenkloster, dessen Ruinen noch stehen. Lange war der Zutritt kostenpflichtig, erst im 20. Jahrhundert wurde die Insel öffentlicher Park. Heute ist sie autofrei; in der Saison spielt der Musikbrunnen zu jeder vollen Stunde.",
+    url: "https://de.wikipedia.org/wiki/Margareteninsel_(Budapest)",
+  },
+};
+
+/* ============================================================
    Google-Maps-Helfer
    ============================================================ */
 function mapsPlaceUrl(item) {
@@ -743,6 +865,51 @@ function renderCard(item, type) {
 
   const link = node.querySelector(".card-link");
   link.href = mapsPlaceUrl(item);
+
+  // Wissenswertes (aufklappbar) – nur bei Sehenswürdigkeiten
+  const facts = type === "sight" ? FACTS[item.name] : null;
+  if (facts) {
+    const det = document.createElement("details");
+    det.className = "facts";
+
+    const sum = document.createElement("summary");
+    sum.innerHTML =
+      '<span class="facts-icon">💡</span>' +
+      '<span class="facts-title">Wissenswertes</span>' +
+      '<span class="facts-chevron">▾</span>';
+    det.appendChild(sum);
+
+    const body = document.createElement("div");
+    body.className = "facts-body";
+
+    if (facts.image) {
+      const fi = document.createElement("img");
+      fi.className = "facts-image";
+      fi.src = facts.image;
+      fi.alt = item.name;
+      fi.loading = "lazy";
+      fi.onerror = () => fi.remove();
+      body.appendChild(fi);
+    }
+
+    const p = document.createElement("p");
+    p.className = "facts-text";
+    p.textContent = facts.text;
+    body.appendChild(p);
+
+    if (facts.url) {
+      const a = document.createElement("a");
+      a.className = "facts-link";
+      a.href = facts.url;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.innerHTML = "<span>📖</span><span>Mehr dazu nachlesen</span>";
+      body.appendChild(a);
+    }
+
+    det.appendChild(body);
+    link.parentNode.insertBefore(det, link);
+  }
 
   if (type === "sight" && item.ticketUrl) {
     const ticketBtn = document.createElement("a");
