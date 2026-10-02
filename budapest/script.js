@@ -4,16 +4,15 @@
    Viel zu Fuß, weite Strecken mit Tram & Metro
    ============================================================ */
 
-/* Ausgangspunkt der Routen: Deák Ferenc tér – der zentrale Knoten.
-   Hier treffen sich alle drei Metrolinien, und hier endet der
-   Flughafenbus 100E. Sobald das Hotel feststeht, kann es hier
-   eingetragen werden (Name, Adresse, lat/lng ersetzen). */
+/* Ausgangspunkt der Routen: eure Unterkunft im Corvin Plaza (Corvin-negyed).
+   Sehr gut angebunden: An der Haltestelle Corvin-negyed halten sowohl
+   die Metro M3 als auch die Tram 4/6, die rund um die Uhr fährt. */
 const BASIS = {
-  name: "Deák Ferenc tér",
-  address: "Zentraler Knoten · M1/M2/M3 · Endhaltestelle Flughafenbus 100E",
-  mapsName: "Deák Ferenc tér, Budapest",
-  lat: 47.4979,
-  lng: 19.0547,
+  name: "Corvin Plaza · Corvin-negyed",
+  address: "Futó utca, VIII. Bezirk · M3 und Tram 4/6 vor der Tür",
+  mapsName: "Corvin Plaza, Budapest",
+  lat: 47.4860,
+  lng: 19.0733,
 };
 
 /* Kinderwagen-Hinweise */
@@ -48,7 +47,7 @@ const FOOD_SVG =
    TAGE
    Felder: name, mapsName, desc, image, lat, lng,
            stroller, transit, viewpoint, badges, ticketUrl, inRoute
-   Pro Tag: route.fromBase (Start am Deák Ferenc tér), route.mode
+   Pro Tag: route.fromBase (Start an eurer Unterkunft), route.mode
    ============================================================ */
 const ZONES = [
   {
@@ -56,47 +55,47 @@ const ZONES = [
     tag: "Fr 23.10. · Ankunft",
     title: "Ankunft & Donaukorso bei Nacht",
     summary: "Landung am Abend, mit dem 100E direkt ins Zentrum. Danach nur noch Koffer abstellen, ein gutes Abendessen – und die beleuchtete Kettenbrücke.",
-    walkFromHotel: "100E ab Flughafen, dann alles zu Fuß",
+    walkFromHotel: "100E + 1 Station M3 bis vor die Haustür",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Sz%C3%A9chenyi_Chain_Bridge_in_Budapest_at_night.jpg/1280px-Sz%C3%A9chenyi_Chain_Bridge_in_Budapest_at_night.jpg",
-    transportNote: "Vom Terminal 2 fährt der <strong>Bus 100E „Airport Express“</strong> rund um die Uhr direkt bis <em>Deák Ferenc tér</em> – ca. 30–45 Min., 2.500 HUF pro Person (mit Wochenkarte nur 1.000 HUF Aufpreis). Er hält unterwegs nur in Kálvin tér und Astoria. Eine Bahn zum Flughafen gibt es in Budapest nicht; der 100E ist die offizielle Schnellverbindung. <strong>Wichtig:</strong> Der 23. Oktober ist ungarischer Nationalfeiertag (Aufstand 1956) – Geschäfte sind zu, Restaurants aber offen, und rund um das Parlament kann es Veranstaltungen und Absperrungen geben.",
+    transportNote: "Vom Terminal 2 fährt der <strong>Bus 100E „Airport Express“</strong> rund um die Uhr Richtung Innenstadt – ca. 30–45 Min., 2.500 HUF pro Person (mit Wochenkarte nur 1.000 HUF Aufpreis). <strong>Steigt schon an der ersten Haltestelle <em>Kálvin tér</em> aus</strong>, nicht erst an der Endstation: Von dort bringt euch die <strong>M3 in einer einzigen Station</strong> nach Corvin-negyed, direkt vor die Unterkunft. Eine Bahn zum Flughafen gibt es in Budapest nicht; der 100E ist die offizielle Schnellverbindung. <strong>Wichtig:</strong> Der 23. Oktober ist ungarischer Nationalfeiertag (Aufstand 1956) – Geschäfte sind zu, Restaurants aber offen, und rund um das Parlament kann es Veranstaltungen und Absperrungen geben.",
     route: { fromBase: true, mode: "walking" },
     sights: [
       {
         name: "Donaukorso & Kettenbrücke",
         mapsName: "Széchenyi Lánchíd, Budapest",
-        desc: "Der Uferweg auf der Pester Seite ist abends am schönsten: Burgpalast und Kettenbrücke angestrahlt, die Donau schwarz und glänzend. Eben, breit und nur 10 Minuten vom Deák Ferenc tér – der perfekte erste Eindruck.",
+        desc: "Der Uferweg auf der Pester Seite ist abends am schönsten: Burgpalast und Kettenbrücke angestrahlt, die Donau schwarz und glänzend. Eben und breit – wenn ihr nach dem Flug noch Energie habt, der perfekte erste Eindruck. Sonst hebt ihr ihn euch für Tag 1 auf.",
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Sz%C3%A9chenyi_Chain_Bridge_in_Budapest_at_night.jpg/1280px-Sz%C3%A9chenyi_Chain_Bridge_in_Budapest_at_night.jpg",
         lat: 47.4986, lng: 19.0433,
         stroller: "yes",
         viewpoint: true,
-        transit: "10 Min. zu Fuß ab Deák Ferenc tér",
+        transit: "M3 bis Ferenciek tere (2 Stat.), 5 Min. zu Fuß",
         badges: ["Kostenlos", "Abends angestrahlt"],
       },
     ],
     restaurants: [
       {
+        name: "A Grund (Ruinengarten)",
+        mapsName: "A Grund, Nagytemplom utca, Budapest",
+        desc: "Ruinenbar mit großem überdachtem Innenhof, buchstäblich um die Ecke von eurer Unterkunft. Unkompliziertes Essen, Streetfood-Stände und viel Platz – die naheliegendste Lösung, wenn ihr spät und müde ankommt.",
+        lat: 47.4866, lng: 19.0772,
+        price: "2.500–5.500 HUF / Gericht",
+        badges: ["5 Min. zu Fuß", "Viel Platz", "Öffnungszeiten vorher prüfen"],
+      },
+      {
+        name: "Corvin Plaza & Üllői-Arkaden",
+        mapsName: "Corvin Plaza, Budapest",
+        desc: "Direkt an eurer Haustür: Im Corvin Plaza gibt es einen Food-Court, unter den Arkaden entlang der Üllői út reihen sich Sushi, Gyros, Burger und Bäckereien. Die sicherste Option, wenn alles andere schon zu hat.",
+        lat: 47.4860, lng: 19.0733,
+        price: "2.000–5.000 HUF / Gericht",
+        badges: ["Direkt vor der Tür", "Viel Auswahl", "Auch spät noch offen"],
+      },
+      {
         name: "Hungarikum Bisztró",
         mapsName: "Hungarikum Bisztró, Budapest",
-        desc: "Das wohl beliebteste traditionelle Lokal der Stadt: Gulasch, Entenbrust, Paprikahuhn, oft mit Live-Zither. Klein und immer voll – für fünf Personen unbedingt vorher reservieren.",
+        desc: "Das wohl beliebteste traditionelle Lokal der Stadt: Gulasch, Entenbrust, Paprikahuhn, oft mit Live-Zither. Klein und immer voll – für fünf Personen unbedingt vorher reservieren. Vom Corvin-negyed mit der M3 etwa 20 Min.",
         lat: 47.5057, lng: 19.0518,
         price: "4.500–8.000 HUF / Hauptgericht",
-        badges: ["Traditionell", "Unbedingt reservieren", "Sehr beliebt"],
-      },
-      {
-        name: "Gerlóczy Café",
-        mapsName: "Gerlóczy Kávéház, Budapest",
-        desc: "Französisch angehauchtes Café-Restaurant an einem ruhigen Platz, nur 5 Minuten vom Deák Ferenc tér. Öffnet lang, unkompliziert und gut, wenn ihr spät ankommt.",
-        lat: 47.4938, lng: 19.0565,
-        price: "4.000–7.500 HUF / Hauptgericht",
-        badges: ["Nah am Zentrum", "Öffnet lang", "Gut für späte Ankunft"],
-      },
-      {
-        name: "Spíler (Gozsdu-Hof)",
-        mapsName: "Spíler Original, Gozsdu Udvar, Budapest",
-        desc: "Im überdachten Gozsdu-Passagenhof im jüdischen Viertel – lebendig, moderne ungarische Küche, große Tische. Praktisch, wenn ihr zu fünft spontan etwas sucht.",
-        lat: 47.4968, lng: 19.0608,
-        price: "4.000–8.000 HUF / Hauptgericht",
-        badges: ["Große Tische", "Überdachter Hof", "Lebendig"],
+        badges: ["Traditionell", "Unbedingt reservieren", "20 Min. mit der M3"],
       },
     ],
   },
@@ -106,9 +105,9 @@ const ZONES = [
     tag: "Sa 24.10. · Tag 1",
     title: "Pester Innenstadt – der Überblick",
     summary: "Erster voller Tag zum Ankommen in der Stadt: Basilika mit Panoramaterrasse, Parlament an der Donau, das Schuh-Mahnmal und die Fußgängerzonen rund um Váci utca.",
-    walkFromHotel: "komplett zu Fuß, ca. 4 km flach",
+    walkFromHotel: "M3 zwei Stationen, dann alles zu Fuß",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Szent_Istvan_Bazilika-view2011-kpjas.jpg/1280px-Szent_Istvan_Bazilika-view2011-kpjas.jpg",
-    transportNote: "Heute braucht ihr fast keine Öffis: Die ganze Runde ist flach und zu Fuß machbar (ca. 4 km verteilt über den Tag). Falls die Füße müde werden, fährt die <strong>Tram 2</strong> am Donauufer entlang – eine der schönsten Straßenbahnstrecken der Welt, mit Blick auf Burg und Parlament. Für das Parlament gilt: <strong>Innenbesichtigung nur mit vorab gebuchter Führung</strong>, Zeitfenster und Ausweis nötig. Von außen und vom Kossuth tér ist es jederzeit frei zugänglich.",
+    transportNote: "Mit der <strong>M3 ab Corvin-negyed zwei Stationen bis Ferenciek tere</strong> (oder drei bis Deák Ferenc tér), danach ist die ganze Runde flach und zu Fuß machbar (ca. 4 km verteilt über den Tag). Falls die Füße müde werden, fährt die <strong>Tram 2</strong> am Donauufer entlang – eine der schönsten Straßenbahnstrecken der Welt, mit Blick auf Burg und Parlament. Für das Parlament gilt: <strong>Innenbesichtigung nur mit vorab gebuchter Führung</strong>, Zeitfenster und Ausweis nötig. Von außen und vom Kossuth tér ist es jederzeit frei zugänglich.",
     route: { fromBase: true, mode: "walking" },
     sights: [
       {
@@ -119,7 +118,7 @@ const ZONES = [
         lat: 47.5008, lng: 19.0539,
         stroller: "yes",
         viewpoint: true,
-        transit: "M1/M2/M3 Deák Ferenc tér, 5 Min. zu Fuß",
+        transit: "M3 bis Deák Ferenc tér (3 Stat.), 5 Min. zu Fuß",
         badges: ["Aufzug zur Kuppel", "Kirche: Spende", "Terrasse: Ticket"],
         ticketUrl: "https://www.bazilika.biz/en",
       },
@@ -189,7 +188,7 @@ const ZONES = [
     summary: "Über die Donau auf den Burgberg: Standseilbahn, Burgpalast mit Nationalgalerie, Matthiaskirche und die Fischerbastei – der berühmteste Aussichtspunkt der Stadt.",
     walkFromHotel: "Tram/Bus hinüber, oben alles zu Fuß",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Budapest_Fisherman%27s_Bastion-20080321-RM-100000.jpg/1280px-Budapest_Fisherman%27s_Bastion-20080321-RM-100000.jpg",
-    transportNote: "Heute Nacht wurde die Uhr zurückgestellt – ihr habt eine Stunde geschenkt bekommen. Zum Burgberg gibt es drei Wege: zu Fuß über die <strong>Kettenbrücke</strong> und dann mit der historischen <strong>Standseilbahn (Sikló)</strong> hinauf, mit <strong>Bus 16</strong> ab Deák Ferenc tér direkt bis zur Burg, oder mit <strong>M2 bis Széll Kálmán tér</strong> und Bus 16A. <strong>Mit Kinderwagen ist Bus 16 die bequemste Variante</strong> – die Standseilbahn ist eng und hat Stufen. Oben ist alles Kopfsteinpflaster, aber flach. Sonntag ist gut gewählt: Die Nationalgalerie hat offen (montags wäre sie zu).",
+    transportNote: "Heute Nacht wurde die Uhr zurückgestellt – ihr habt eine Stunde geschenkt bekommen. Zum Burgberg fahrt ihr am besten mit der <strong>M3 bis Deák Ferenc tér</strong> (3 Stationen) und steigt dort in den <strong>Bus 16</strong> um, der direkt auf den Burgberg fährt. Alternativ bis Ferenciek tere, zu Fuß über die <strong>Kettenbrücke</strong> und mit der historischen <strong>Standseilbahn (Sikló)</strong> hinauf. <strong>Mit Kinderwagen ist Bus 16 die bequemste Variante</strong> – die Standseilbahn ist eng und hat Stufen. Oben ist alles Kopfsteinpflaster, aber flach. Sonntag ist gut gewählt: Die Nationalgalerie hat offen (montags wäre sie zu).",
     route: { fromBase: false, mode: "walking" },
     sights: [
       {
@@ -277,10 +276,10 @@ const ZONES = [
     tag: "Mo 26.10. · Tag 3",
     title: "Jüdisches Viertel & Große Markthalle",
     summary: "Montag sind fast alle Museen zu – perfekt für den Tag, an dem es ohnehin um Markthalle, Synagoge, Ruinenbars und Essen geht.",
-    walkFromHotel: "zu Fuß, Rückweg per Tram 47/49",
+    walkFromHotel: "15 Min. zu Fuß zur Markthalle, zurück per Tram 4/6",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/VasarcsarnokFotoThalerTamas.JPG/1280px-VasarcsarnokFotoThalerTamas.JPG",
-    transportNote: "<strong>Montags sind praktisch alle Budapester Museen geschlossen</strong> – deshalb liegt dieser Tag bewusst hier. Die Große Markthalle öffnet schon um 6 Uhr und schließt um 17 Uhr (montags etwas früher), also am besten vormittags hin. Von dort zurück ins jüdische Viertel mit <strong>Tram 47 oder 49</strong> bis Astoria (oder 20 Min. zu Fuß über die Károly körút). Die Dohány-Synagoge ist <strong>samstags und an jüdischen Feiertagen geschlossen</strong>, montags aber offen. Für die Synagoge gilt: Schultern und Knie bedeckt, Männer bekommen am Eingang eine Kippa.",
-    route: { fromBase: false, mode: "walking" },
+    transportNote: "<strong>Montags sind praktisch alle Budapester Museen geschlossen</strong> – deshalb liegt dieser Tag bewusst hier. Die Große Markthalle öffnet schon um 6 Uhr und schließt um 17 Uhr (montags etwas früher), also am besten vormittags hin – von eurer Unterkunft sind es <strong>15 Min. zu Fuß die Üllői út hinunter</strong> oder eine Station mit der M3 bis Kálvin tér. Weiter ins jüdische Viertel mit <strong>Tram 47 oder 49</strong> bis Astoria (oder 20 Min. zu Fuß über die Károly körút); zurück fährt die <strong>Tram 4/6</strong> ab Blaha Lujza tér in zwei Stationen bis vor die Haustür. Die Dohány-Synagoge ist <strong>samstags und an jüdischen Feiertagen geschlossen</strong>, montags aber offen. Für die Synagoge gilt: Schultern und Knie bedeckt, Männer bekommen am Eingang eine Kippa.",
+    route: { fromBase: true, mode: "walking" },
     sights: [
       {
         name: "Große Markthalle",
@@ -346,10 +345,10 @@ const ZONES = [
     tag: "Di 27.10. · Tag 4",
     title: "Gellértberg, Zitadelle & Ludwig Museum",
     summary: "Der beste Panoramablick der Stadt von der frisch wiedereröffneten Zitadelle – und am Nachmittag moderne Kunst im Ludwig Museum an der Donau.",
-    walkFromHotel: "Tram 47/49 nach Buda, dann Tram 2 nach Süden",
+    walkFromHotel: "Tram 4/6 direkt bis Szent Gellért tér",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Gell%C3%A9rtHillSkyline.jpg/1280px-Gell%C3%A9rtHillSkyline.jpg",
-    transportNote: "Mit <strong>Tram 47 oder 49</strong> über die Freiheitsbrücke bis <em>Szent Gellért tér</em>. Der Aufstieg auf den Gellértberg dauert 20–30 Minuten über Serpentinenwege – <strong>mit Kinderwagen anstrengend, aber zu viert gut machbar</strong>; alternativ fährt <strong>Bus 27</strong> ab Móricz Zsigmond körtér fast bis oben. Am Nachmittag zurück ans Ufer und mit der <strong>Tram 2</strong> (die Panoramastrecke!) nach Süden bis <em>Müpa</em> zum Ludwig Museum. Die Zitadelle ist seit März 2026 nach elf Jahren Umbau wieder offen: Der Park oben ist kostenlos.",
-    route: { fromBase: false, mode: "transit" },
+    transportNote: "Heute habt ihr Glück mit der Lage: Die <strong>Tram 4/6</strong> fährt ab Corvin-negyed <strong>ohne Umsteigen in vier Stationen bis <em>Szent Gellért tér</em></strong> – über die Petőfi-Brücke und am Donauufer entlang. Der Aufstieg auf den Gellértberg dauert 20–30 Minuten über Serpentinenwege – <strong>mit Kinderwagen anstrengend, aber zu viert gut machbar</strong>; alternativ fährt <strong>Bus 27</strong> ab Móricz Zsigmond körtér fast bis oben. Am Nachmittag zurück ans Ufer und mit der <strong>Tram 2</strong> (die Panoramastrecke!) nach Süden bis <em>Müpa</em> zum Ludwig Museum. Die Zitadelle ist seit März 2026 nach elf Jahren Umbau wieder offen: Der Park oben ist kostenlos.",
+    route: { fromBase: true, mode: "transit" },
     sights: [
       {
         name: "Freiheitsbrücke",
@@ -446,9 +445,9 @@ const ZONES = [
     tag: "Mi 28.10. · Tag 5",
     title: "Stadtwäldchen & Haus der Musik",
     summary: "Heldenplatz, Märchenburg am See, das spektakuläre Haus der Ungarischen Musik, das neue Ethnographische Museum – und zum Abschluss das Széchenyi-Thermalbad.",
-    walkFromHotel: "M1 ab Deák Ferenc tér, im Park alles zu Fuß",
+    walkFromHotel: "Tram 4/6 + M1, im Park alles zu Fuß",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/HUN-2015-Budapest-Heroes%E2%80%99_Square.jpg/1280px-HUN-2015-Budapest-Heroes%E2%80%99_Square.jpg",
-    transportNote: "Mit der <strong>M1</strong> – der ältesten U-Bahn Kontinentaleuropas von 1896, selbst ein Denkmal – ab Deák Ferenc tér bis <em>Hősök tere</em> oder <em>Széchenyi fürdő</em>, nur 10 Minuten. Achtung: Die M1-Stationen sind flach, haben aber <strong>nur Treppen, keine Aufzüge</strong>; mit Kinderwagen seid ihr zu viert aber schnell oben. Im Stadtwäldchen selbst ist alles eben, breit und autofrei. <strong>Tipp fürs Bad:</strong> Thermalwasser ist für ein Baby zu heiß – ihr seid aber vier Erwachsene, also können zwei baden gehen, während die anderen mit dem Kleinen im Park bleiben.",
+    transportNote: "Am schnellsten mit der <strong>Tram 4/6 ab Corvin-negyed bis Oktogon</strong> (4 Stationen) und dort in die <strong>M1</strong> umsteigen – die älteste U-Bahn Kontinentaleuropas von 1896, selbst ein Denkmal – bis <em>Hősök tere</em> oder <em>Széchenyi fürdő</em>. Zusammen rund 20 Minuten. Achtung: Die M1-Stationen sind flach, haben aber <strong>nur Treppen, keine Aufzüge</strong>; mit Kinderwagen seid ihr zu viert aber schnell oben. Im Stadtwäldchen selbst ist alles eben, breit und autofrei. <strong>Tipp fürs Bad:</strong> Thermalwasser ist für ein Baby zu heiß – ihr seid aber vier Erwachsene, also können zwei baden gehen, während die anderen mit dem Kleinen im Park bleiben.",
     route: { fromBase: true, mode: "transit" },
     sights: [
       {
@@ -536,9 +535,9 @@ const ZONES = [
     tag: "Do 29.10. · Tag 6",
     title: "Andrássy, Oper & Impressionismus",
     summary: "Die Prachtstraße hinauf, vorbei an der Staatsoper – und dann ins Museum der Bildenden Künste, wo seit dem 28.10. die große Gauguin-Schau mit Monet, Cézanne und van Gogh läuft.",
-    walkFromHotel: "Andrássy út zu Fuß, Rückweg mit M1",
+    walkFromHotel: "Tram 4/6 bis Oktogon, dann Andrássy zu Fuß",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Budapest_Fine_Arts_Museum_R01.jpg/1280px-Budapest_Fine_Arts_Museum_R01.jpg",
-    transportNote: "Die <strong>Andrássy út</strong> ist 2,5 km lang und führt schnurgerade vom Zentrum zum Heldenplatz – flach, breit und von Platanen gesäumt, ideal zum Schieben. Lauft so weit ihr mögt und steigt unterwegs in die <strong>M1</strong> ein, die genau darunter verläuft und alle paar hundert Meter hält. <strong>Zum Museum:</strong> Das Szépművészeti ist dienstags bis sonntags 10–18 Uhr offen (letzter Einlass 17 Uhr), montags geschlossen. Für die Gauguin-Sonderausstellung solltet ihr ein <strong>Zeitfenster vorab online buchen</strong> – sie ist am 28.10. erst eröffnet worden und entsprechend gefragt.",
+    transportNote: "Mit der <strong>Tram 4/6 bis Oktogon</strong> seid ihr in 4 Stationen mitten auf der Andrássy út. Von dort könnt ihr wahlweise stadteinwärts zur Oper laufen (10 Min.) oder stadtauswärts zum Heldenplatz. Die <strong>Andrássy út</strong> ist 2,5 km lang, flach, breit und von Platanen gesäumt – ideal zum Schieben. Lauft so weit ihr mögt und steigt unterwegs in die <strong>M1</strong> ein, die genau darunter verläuft und alle paar hundert Meter hält. <strong>Zum Museum:</strong> Das Szépművészeti ist dienstags bis sonntags 10–18 Uhr offen (letzter Einlass 17 Uhr), montags geschlossen. Für die Gauguin-Sonderausstellung solltet ihr ein <strong>Zeitfenster vorab online buchen</strong> – sie ist am 28.10. erst eröffnet worden und entsprechend gefragt.",
     route: { fromBase: true, mode: "walking" },
     sights: [
       {
@@ -608,9 +607,9 @@ const ZONES = [
     tag: "Fr 30.10. · Abreise",
     title: "Halber Tag & Heimflug",
     summary: "Ein ruhiger Vormittag auf der Margareteninsel oder in der Markthalle, früh Mittagessen – und mit genug Puffer zum Flughafen.",
-    walkFromHotel: "Tram 4/6 zur Insel, dann 100E zum Flughafen",
+    walkFromHotel: "Tram 4/6 direkt zur Insel, dann M3 + 100E",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Budapest_Donauinsel_2.jpg/1280px-Budapest_Donauinsel_2.jpg",
-    transportNote: "<strong>Zeitplan:</strong> Abflug 20:00 Uhr → spätestens 17:30 Uhr am Flughafen → mit dem 100E (ca. 40 Min. plus Puffer) <strong>gegen 16:15 Uhr vom Deák Ferenc tér los</strong>. Bis etwa 15 Uhr habt ihr also frei. Die Margareteninsel erreicht ihr mit <strong>Tram 4 oder 6</strong>, die mitten über die Margaretenbrücke fährt und direkt auf der Insel hält – autofrei, flach und mit breiten Wegen, perfekt zum Schieben. Wer lieber in der Stadt bleibt: Die Hold utcai Vásárcsarnok ist eine kleine Markthalle mit sehr gutem Mittagstisch, 10 Minuten vom Deák Ferenc tér.",
+    transportNote: "<strong>Zeitplan:</strong> Abflug 20:00 Uhr → spätestens 17:30 Uhr am Flughafen → M3 eine Station bis Kálvin tér, dort in den 100E (ca. 40 Min. plus Puffer) → <strong>gegen 16:00 Uhr von der Unterkunft los</strong>. Bis etwa 15 Uhr habt ihr also frei. Praktisch: Die <strong>Tram 4/6 fährt ab Corvin-negyed ohne Umsteigen bis <em>Margitsziget</em></strong>, mitten auf der Margaretenbrücke – die Insel ist autofrei, flach und hat breite Wege, perfekt zum Schieben. Wer lieber in der Stadt bleibt: Die Hold utcai Vásárcsarnok ist eine kleine Markthalle mit sehr gutem Mittagstisch (M3 bis Arany János utca).",
     route: { fromBase: true, mode: "transit" },
     sights: [
       {
@@ -620,7 +619,7 @@ const ZONES = [
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Budapest_Donauinsel_2.jpg/1280px-Budapest_Donauinsel_2.jpg",
         lat: 47.5270, lng: 19.0497,
         stroller: "yes",
-        transit: "Tram 4/6 bis Margitsziget",
+        transit: "Tram 4/6 ab Corvin-negyed, ohne Umsteigen",
         badges: ["Autofrei", "Kostenlos", "Breite, ebene Wege"],
       },
     ],
@@ -636,7 +635,7 @@ const ZONES = [
       {
         name: "Café Gerlóczy",
         mapsName: "Gerlóczy Kávéház, Budapest",
-        desc: "Falls ihr es ruhig ausklingen lassen wollt: Frühstück oder ein letzter Kaffee an einem der schönsten kleinen Plätze der Innenstadt, fünf Minuten vom Deák Ferenc tér.",
+        desc: "Falls ihr es ruhig ausklingen lassen wollt: Frühstück oder ein letzter Kaffee an einem der schönsten kleinen Plätze der Innenstadt – mit der M3 drei Stationen bis Deák Ferenc tér, dann fünf Minuten zu Fuß.",
         lat: 47.4938, lng: 19.0565,
         price: "2.500–6.000 HUF / Gericht",
         badges: ["Frühstück", "Zentral", "Ruhiger Platz"],
@@ -828,11 +827,11 @@ function renderZone(zone) {
   }
   const hint = node.querySelector(".route-hint");
   if (transit && fromBase) {
-    hint.textContent = "Startet am Deák Ferenc tér und verbindet die Stationen mit Tram, Metro & Bus.";
+    hint.textContent = "Startet an eurer Unterkunft (Corvin-negyed) und verbindet die Stationen mit Tram, Metro & Bus.";
   } else if (transit) {
     hint.textContent = "Verbindet die Stationen der Reihe nach mit Tram, Metro & Bus.";
   } else if (fromBase) {
-    hint.textContent = "Startet am Deák Ferenc tér und läuft die Stationen der Reihe nach ab, alles zu Fuß.";
+    hint.textContent = "Startet an eurer Unterkunft (Corvin-negyed) und läuft die Stationen der Reihe nach ab, alles zu Fuß.";
   } else {
     hint.textContent = "Läuft die Stationen der Reihe nach ab, alles zu Fuß.";
   }
