@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#2a1410" />
   <meta name="description" content="Interaktive Reiseführer für die Familie – Rom, Berlin und China, jeweils mit Karten, Routen und Kinderwagen-Hinweisen." />
-  <title>Reiseführer · Rom, Berlin, Paris & China</title>
+  <title>Reiseführer · Rom, Berlin, Paris, China &amp; Krakau</title>
   <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -79,8 +79,8 @@
     @media (min-width: 720px) {
       .cards { grid-template-columns: 1fr 1fr; }
     }
-    @media (min-width: 1240px) {
-      .cards { grid-template-columns: repeat(4, 1fr); }
+    @media (min-width: 1080px) {
+      .cards { grid-template-columns: repeat(3, 1fr); }
     }
 
     .city-card {
@@ -122,6 +122,9 @@
     }
     .city-card.paris::after {
       background: linear-gradient(180deg, rgba(30,13,26,0.15) 0%, rgba(91,42,77,0.42) 45%, rgba(30,13,26,0.90) 100%);
+    }
+    .city-card.krakau::after {
+      background: linear-gradient(180deg, rgba(13,31,26,0.15) 0%, rgba(36,86,74,0.42) 45%, rgba(13,31,26,0.90) 100%);
     }
 
     .card-content {
@@ -174,6 +177,7 @@
     .berlin .open-btn { background: #d6bc63; }
     .china .open-btn { background: #d9a441; }
     .paris .open-btn { background: #d8b56a; }
+    .krakau .open-btn { background: #cbb46b; }
     .city-card:hover .open-btn { transform: translateX(3px); filter: brightness(1.05); }
 
     footer {
@@ -194,7 +198,7 @@
     <header>
       <div class="kicker">Familien-Reiseführer · mit Baby</div>
       <h1>Wohin geht's?</h1>
-      <p class="sub">Vier Reisen, ein Prinzip: Gebiete zum Auswählen, Karten zum Antippen, fertige Routen und Kinderwagen-Hinweise auf jeder Station.</p>
+      <p class="sub">Fünf Reisen, ein Prinzip: Gebiete zum Auswählen, Karten zum Antippen, fertige Routen und Kinderwagen-Hinweise auf jeder Station.</p>
     </header>
 
     <nav class="cards">
@@ -242,6 +246,18 @@
           <h2 class="city-name">China</h2>
           <div class="city-dates">09.–30. September 2026</div>
           <p class="city-desc">Sieben Städte von Hongkong bis Shanghai – fast alles mit dem Schnellzug.</p>
+          <span class="open-btn">Guide öffnen&nbsp;→</span>
+        </div>
+      </a>
+
+      <a class="city-card krakau" href="krakau/index.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Sukiennice_and_Main_Market_Square_Krakow_Poland.JPG/1280px-Sukiennice_and_Main_Market_Square_Krakow_Poland.JPG" alt="Krakau – Hauptmarkt mit Tuchhallen" loading="lazy" />
+        <div class="card-content">
+          <span class="city-tag">Polen</span>
+          <div class="flag">🐉</div>
+          <h2 class="city-name">Kraków</h2>
+          <div class="city-dates">25.–31. Oktober 2026</div>
+          <p class="city-desc">Eine Woche mit Tram &amp; Bus: Hauptmarkt, Wawel, Kazimierz, Schindler-Fabrik &amp; Wieliczka.</p>
           <span class="open-btn">Guide öffnen&nbsp;→</span>
         </div>
       </a>
