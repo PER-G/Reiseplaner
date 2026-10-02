@@ -32,65 +32,6 @@
   </header>
 
   <main>
-    <section class="intro">
-      <h2>Wie funktioniert dieser Guide?</h2>
-      <ul class="intro-list">
-        <li><strong>Sieben Tageskarten</strong> – von der Ankunft bis zum Heimflug, jede für ein Stadtviertel oder einen Ausflug.</li>
-        <li><strong>Auf jede Karte tippen</strong> öffnet die Location direkt in Google&nbsp;Maps.</li>
-        <li><strong>Die Linie steht auf der Karte</strong> – das blaue Badge <span class="badge transit">🚊 Tram 3/24</span> sagt euch direkt, womit ihr hinkommt.</li>
-        <li><strong>Tag öffnen</strong> → unten startet ein Button die ganze Tour als Google-Maps-Route (zu Fuß bzw. mit Tram&nbsp;&amp; Bahn).</li>
-        <li><strong>Kinderwagen-Hinweise</strong> auf jeder Karte. <span class="badge stroller-yes">🛒 ok</span> <span class="badge stroller-careful">⚠ Kopfstein</span> <span class="badge stroller-no">🤱 Trage</span></li>
-        <li><strong>Glutenfreies</strong> ist wie in Berlin und Paris grün markiert – Krakau ist dafür überraschend gut aufgestellt.</li>
-      </ul>
-    </section>
-
-    <section class="info-panel">
-      <h2>🚊 Nahverkehr <span class="status-pill">Alles ohne Auto machbar</span></h2>
-      <p>Krakau ist eine ideale Öffi-Stadt: ein dichtes Tramnetz, ein Ticket für Tram und Bus, und zwei Regionalzug-Linien, die Flughafen und Wieliczka direkt anbinden. <strong>Kinder unter 4 Jahren fahren kostenlos.</strong></p>
-      <div class="info-grid">
-        <div class="info-box">
-          <h3>MPK-Tickets (Stand 2026)</h3>
-          <div class="fare"><span>20 Minuten</span><b>4 PLN</b></div>
-          <div class="fare"><span>60 Minuten</span><b>6 PLN</b></div>
-          <div class="fare"><span>90 Minuten</span><b>9 PLN</b></div>
-          <div class="fare"><span>24 Stunden</span><b>25 PLN</b></div>
-          <div class="fare"><span>72 Std. &amp; 7 Tage</span><b>erhältlich</b></div>
-          <p style="margin-top:0.5rem;">Zeitbasiert – innerhalb der Gültigkeit beliebig oft umsteigen. Für eine Woche lohnt sich ein <strong>7-Tage-Ticket</strong>.</p>
-        </div>
-        <div class="info-box">
-          <h3>Flughafen ↔ Stadt</h3>
-          <p>Der Zug <strong>SKA1</strong> fährt alle 30 Minuten vom Terminal direkt zum Hauptbahnhof Kraków Główny – <strong>ca. 20 Minuten, 20 PLN</strong>.</p>
-          <p style="margin-top:0.5rem;"><strong>Achtung:</strong> Das ist ein Bahnticket, kein MPK-Ticket. Die Automaten stehen in der Ankunftshalle.</p>
-        </div>
-        <div class="info-box">
-          <h3>Praktisch vor Ort</h3>
-          <p>Tickets im Automaten in jeder Tram (Karte funktioniert), per App oder am Kiosk. <strong>Papiertickets beim Einsteigen entwerten.</strong></p>
-          <p style="margin-top:0.5rem;">Die App <strong>jakdojade</strong> ist in Polen Standard und zeigt Abfahrten in Echtzeit – Google&nbsp;Maps funktioniert hier aber genauso gut.</p>
-        </div>
-      </div>
-      <div class="info-actions">
-        <a class="info-btn" href="https://www.mpk.krakow.pl/en" target="_blank" rel="noopener">🚊 MPK Kraków (offiziell)</a>
-        <a class="info-btn secondary" href="https://jakdojade.pl/krakow/trasa" target="_blank" rel="noopener">Fahrplan-App jakdojade</a>
-      </div>
-    </section>
-
-    <section class="logistics">
-      <div class="logi-card">
-        <h3>🛬 Ankunft <span class="logi-time">So 25.10.</span></h3>
-        <div class="logi-leg"><span class="t">SKA1</span><span class="d"><strong>Flughafen → Kraków Główny</strong><br />ca. 20 Min., 20 PLN, alle 30 Min.</span></div>
-        <div class="logi-leg"><span class="t">10 Min.</span><span class="d"><strong>Hauptbahnhof → Hauptmarkt</strong><br />zu Fuß durch die Galeria Krakowska und den Planty-Park</span></div>
-        <p style="margin-top:0.7rem;"><strong>Zeitumstellung!</strong> In der Nacht von Samstag auf Sonntag (24./25.10.) wird die Uhr von 3 auf 2 Uhr zurückgestellt. Ihr gewinnt eine Stunde – prüft trotzdem, ob eure Flugzeit schon in Winterzeit angegeben ist.</p>
-        <p>Der erste Tag ist bewusst klein gehalten: Hauptmarkt, Tuchhallen, Marienkirche. Alles zu Fuß, kein Ticket nötig.</p>
-      </div>
-      <div class="logi-card">
-        <h3>🛫 Abreise <span class="logi-time">Sa 31.10.</span></h3>
-        <div class="logi-leg"><span class="t">SKA1</span><span class="d"><strong>Kraków Główny → Flughafen</strong><br />ca. 20 Min., alle 30 Min.</span></div>
-        <div class="logi-leg"><span class="t">2,5 Std.</span><span class="d"><strong>Puffer vor Abflug</strong><br />also ca. 3 Std. vorher vom Hotel los</span></div>
-        <p style="margin-top:0.7rem;"><strong>Allerheiligen:</strong> Am 1. November ist in Polen ein großer Feiertag – schon am 31.10. fahren viele Familien zu den Friedhöfen, es wird voll auf den Straßen. Der Flughafenzug steht nicht im Stau, nehmt ihn statt eines Taxis.</p>
-        <p>Vormittags noch Barbakan und Florianstor – die liegen direkt auf dem Weg zum Bahnhof.</p>
-      </div>
-    </section>
-
     <section class="zones" id="zones"></section>
 
     <template id="zone-template">
@@ -148,6 +89,65 @@
         </div>
       </article>
     </template>
+
+    <section class="logistics">
+      <div class="logi-card">
+        <h3>🛬 Ankunft <span class="logi-time">So 25.10.</span></h3>
+        <div class="logi-leg"><span class="t">SKA1</span><span class="d"><strong>Flughafen → Kraków Główny</strong><br />ca. 20 Min., 20 PLN, alle 30 Min.</span></div>
+        <div class="logi-leg"><span class="t">10 Min.</span><span class="d"><strong>Hauptbahnhof → Hauptmarkt</strong><br />zu Fuß durch die Galeria Krakowska und den Planty-Park</span></div>
+        <p style="margin-top:0.7rem;"><strong>Zeitumstellung!</strong> In der Nacht von Samstag auf Sonntag (24./25.10.) wird die Uhr von 3 auf 2 Uhr zurückgestellt. Ihr gewinnt eine Stunde – prüft trotzdem, ob eure Flugzeit schon in Winterzeit angegeben ist.</p>
+        <p>Der erste Tag ist bewusst klein gehalten: Hauptmarkt, Tuchhallen, Marienkirche. Alles zu Fuß, kein Ticket nötig.</p>
+      </div>
+      <div class="logi-card">
+        <h3>🛫 Abreise <span class="logi-time">Sa 31.10.</span></h3>
+        <div class="logi-leg"><span class="t">SKA1</span><span class="d"><strong>Kraków Główny → Flughafen</strong><br />ca. 20 Min., alle 30 Min.</span></div>
+        <div class="logi-leg"><span class="t">2,5 Std.</span><span class="d"><strong>Puffer vor Abflug</strong><br />also ca. 3 Std. vorher vom Hotel los</span></div>
+        <p style="margin-top:0.7rem;"><strong>Allerheiligen:</strong> Am 1. November ist in Polen ein großer Feiertag – schon am 31.10. fahren viele Familien zu den Friedhöfen, es wird voll auf den Straßen. Der Flughafenzug steht nicht im Stau, nehmt ihn statt eines Taxis.</p>
+        <p>Vormittags noch Barbakan und Florianstor – die liegen direkt auf dem Weg zum Bahnhof.</p>
+      </div>
+    </section>
+
+    <section class="intro">
+      <h2>Wie funktioniert dieser Guide?</h2>
+      <ul class="intro-list">
+        <li><strong>Sieben Tageskarten</strong> – von der Ankunft bis zum Heimflug, jede für ein Stadtviertel oder einen Ausflug.</li>
+        <li><strong>Auf jede Karte tippen</strong> öffnet die Location direkt in Google&nbsp;Maps.</li>
+        <li><strong>Die Linie steht auf der Karte</strong> – das blaue Badge <span class="badge transit">🚊 Tram 3/24</span> sagt euch direkt, womit ihr hinkommt.</li>
+        <li><strong>Tag öffnen</strong> → unten startet ein Button die ganze Tour als Google-Maps-Route (zu Fuß bzw. mit Tram&nbsp;&amp; Bahn).</li>
+        <li><strong>Kinderwagen-Hinweise</strong> auf jeder Karte. <span class="badge stroller-yes">🛒 ok</span> <span class="badge stroller-careful">⚠ Kopfstein</span> <span class="badge stroller-no">🤱 Trage</span></li>
+        <li><strong>Glutenfreies</strong> ist wie in Berlin und Paris grün markiert – Krakau ist dafür überraschend gut aufgestellt.</li>
+      </ul>
+    </section>
+
+    <section class="info-panel">
+      <h2>🚊 Nahverkehr <span class="status-pill">Alles ohne Auto machbar</span></h2>
+      <p>Krakau ist eine ideale Öffi-Stadt: ein dichtes Tramnetz, ein Ticket für Tram und Bus, und zwei Regionalzug-Linien, die Flughafen und Wieliczka direkt anbinden. <strong>Kinder unter 4 Jahren fahren kostenlos.</strong></p>
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>MPK-Tickets (Stand 2026)</h3>
+          <div class="fare"><span>20 Minuten</span><b>4 PLN</b></div>
+          <div class="fare"><span>60 Minuten</span><b>6 PLN</b></div>
+          <div class="fare"><span>90 Minuten</span><b>9 PLN</b></div>
+          <div class="fare"><span>24 Stunden</span><b>25 PLN</b></div>
+          <div class="fare"><span>72 Std. &amp; 7 Tage</span><b>erhältlich</b></div>
+          <p style="margin-top:0.5rem;">Zeitbasiert – innerhalb der Gültigkeit beliebig oft umsteigen. Für eine Woche lohnt sich ein <strong>7-Tage-Ticket</strong>.</p>
+        </div>
+        <div class="info-box">
+          <h3>Flughafen ↔ Stadt</h3>
+          <p>Der Zug <strong>SKA1</strong> fährt alle 30 Minuten vom Terminal direkt zum Hauptbahnhof Kraków Główny – <strong>ca. 20 Minuten, 20 PLN</strong>.</p>
+          <p style="margin-top:0.5rem;"><strong>Achtung:</strong> Das ist ein Bahnticket, kein MPK-Ticket. Die Automaten stehen in der Ankunftshalle.</p>
+        </div>
+        <div class="info-box">
+          <h3>Praktisch vor Ort</h3>
+          <p>Tickets im Automaten in jeder Tram (Karte funktioniert), per App oder am Kiosk. <strong>Papiertickets beim Einsteigen entwerten.</strong></p>
+          <p style="margin-top:0.5rem;">Die App <strong>jakdojade</strong> ist in Polen Standard und zeigt Abfahrten in Echtzeit – Google&nbsp;Maps funktioniert hier aber genauso gut.</p>
+        </div>
+      </div>
+      <div class="info-actions">
+        <a class="info-btn" href="https://www.mpk.krakow.pl/en" target="_blank" rel="noopener">🚊 MPK Kraków (offiziell)</a>
+        <a class="info-btn secondary" href="https://jakdojade.pl/krakow/trasa" target="_blank" rel="noopener">Fahrplan-App jakdojade</a>
+      </div>
+    </section>
 
     <section class="tips">
       <h2>Allgemeine Hinweise</h2>

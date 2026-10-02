@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5 { font-family: var(--serif); font-weight: 600; letter-spacing
     radial-gradient(900px 500px at 0% 100%, rgba(125,66,105,0.55), transparent 60%),
     linear-gradient(160deg, #1e0d1a 0%, #3f1c37 46%, #5b2a4d 100%);
   color: #fbf3f7;
-  padding: clamp(2.5rem, 8vw, 5rem) clamp(1.25rem, 5vw, 3rem) clamp(2rem, 6vw, 4rem);
+  padding: clamp(4.5rem, 8vw, 5rem) clamp(1.25rem, 5vw, 3rem) clamp(2rem, 6vw, 4rem);
   overflow: hidden;
 }
 .hero::before {
@@ -137,7 +137,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
   background: #fff;
   border-radius: var(--radius);
   padding: clamp(1.5rem, 4vw, 2.25rem);
-  margin: clamp(-2rem, -4vw, -3rem) auto 2.5rem;
+  margin: 0 auto 2.5rem;
   box-shadow: var(--shadow);
   position: relative;
   z-index: 2;
@@ -301,7 +301,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
   display: grid;
   gap: 1.5rem;
   grid-template-columns: 1fr;
-  margin-bottom: 3rem;
+  margin: clamp(2rem, 5vw, 3rem) 0 3rem;
 }
 @media (min-width: 720px) {
   .zones { grid-template-columns: repeat(2, 1fr); }

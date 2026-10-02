@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5 { font-family: var(--serif); font-weight: 600; letter-spacing
     radial-gradient(900px 500px at 0% 100%, rgba(42,116,132,0.55), transparent 60%),
     linear-gradient(160deg, #071d22 0%, #0f3d46 46%, #15535f 100%);
   color: #f1f8f9;
-  padding: clamp(2.5rem, 8vw, 5rem) clamp(1.25rem, 5vw, 3rem) clamp(2rem, 6vw, 4rem);
+  padding: clamp(4.5rem, 8vw, 5rem) clamp(1.25rem, 5vw, 3rem) clamp(2rem, 6vw, 4rem);
   overflow: hidden;
 }
 .hero::before {
@@ -318,7 +318,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
   display: grid;
   gap: 1.5rem;
   grid-template-columns: 1fr;
-  margin: clamp(-2rem, -4vw, -3rem) 0 3rem;
+  margin: clamp(2rem, 5vw, 3rem) 0 3rem;
   position: relative;
   z-index: 2;
 }

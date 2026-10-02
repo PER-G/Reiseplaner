@@ -32,62 +32,6 @@
   </header>
 
   <main>
-    <section class="intro">
-      <h2>Wie funktioniert dieser Guide?</h2>
-      <ul class="intro-list">
-        <li><strong>Vier Tageskarten</strong> – Ankunftsabend, zwei volle Tage, Abreisevormittag. Dazu eine <strong>Reserve-Karte</strong> für Regen oder Planänderungen.</li>
-        <li><strong>Auf jede Karte tippen</strong> öffnet die Location direkt in Google&nbsp;Maps.</li>
-        <li><strong>Tag öffnen</strong> → unten startet ein Button die ganze Tour als Google-Maps-Route (zu Fuß bzw. mit Metro&nbsp;&amp; Bus).</li>
-        <li><strong>Kinderwagen-Hinweise</strong> auf jeder Karte. <span class="badge stroller-yes">🛒 ok</span> <span class="badge stroller-careful">⚠ mühsam</span> <span class="badge stroller-no">🤱 lieber Trage</span></li>
-        <li><strong>Glutenfreies</strong> ist wie in Berlin grün markiert – pro Tag mindestens eine Adresse.</li>
-      </ul>
-    </section>
-
-    <section class="louvre-status">
-      <h2>🖼️ Louvre-Check <span class="status-pill">Ja – aber nur mit Reservierung</span></h2>
-      <p>Kurz gesagt: Ihr kommt rein, wenn ihr <strong>sofort bucht</strong>. Der Louvre ist an beiden vollen Tagen geöffnet – dienstags wäre er zu, aber da sitzt ihr ohnehin noch im Zug.</p>
-      <div class="louvre-grid">
-        <div class="louvre-box">
-          <h3>Eure Tage</h3>
-          <p><strong>Mi 19.08.: 9–21 Uhr</strong> (Nocturne, langer Abend)<br />
-             <strong>Do 20.08.: 9–18 Uhr</strong><br />
-             Dienstags immer geschlossen. Letzter Einlass 1 Std. vor Schluss.</p>
-        </div>
-        <div class="louvre-box">
-          <h3>Der Haken</h3>
-          <p>Vom <strong>1. Juli bis 31. August 2026 ist eine Reservierung für alle Pflicht</strong> – ohne Zeitfenster kein Einlass. Tickets kommen 90 Tage im Voraus heraus, Sommer-Vormittage sind schnell weg. <strong>Erwachsene 22&nbsp;€ (EU), unter 18 frei.</strong></p>
-        </div>
-        <div class="louvre-box">
-          <h3>Plan B, falls ausgebucht</h3>
-          <p>Mit einer <strong>„Amis du Louvre“-Karte</strong> braucht der Karteninhaber keine Reservierung – und <strong>mittwochs abends (Nocturne) auch die Begleitung nicht</strong>. Mitgliedschaft ab 22&nbsp;€, Einzelkarte 80&nbsp;€. Sonst: Musée d'Orsay als Alternative.</p>
-        </div>
-      </div>
-      <div class="louvre-actions">
-        <a class="louvre-btn" href="https://ticket.louvre.fr/en" target="_blank" rel="noopener">🎟️ Jetzt Zeitfenster buchen</a>
-        <a class="louvre-btn secondary" href="https://www.amisdulouvre.fr/" target="_blank" rel="noopener">Plan B: Amis du Louvre</a>
-      </div>
-      <p style="margin:1rem 0 0; font-size:0.86rem;">
-        <strong>Gut zu wissen:</strong> Die <em>Galerie d'Apollon</em> ist nach dem Einbruch vom Oktober 2025 seit dem 22.07.2026 wieder geöffnet – allerdings ohne die Kronjuwelen, die Vitrinen bleiben leer. Einzelne Säle sind wegen Sanierung zeitweise dicht; die tagesaktuelle Liste steht auf louvre.fr.
-      </p>
-    </section>
-
-    <section class="logistics">
-      <div class="logi-card">
-        <h3>🚄 Hinfahrt <span class="logi-time">Di 18.08.</span></h3>
-        <div class="logi-leg"><span class="t">11:33 → 12:28</span><span class="d"><strong>Tübingen Hbf → Stuttgart Hbf</strong><br />RE, 55 Min., direkt</span></div>
-        <div class="logi-leg"><span class="t">13:43 → 17:16</span><span class="d"><strong>Stuttgart Hbf → Paris Est</strong><br />TGV/ICE, 3 Std. 33, direkt</span></div>
-        <p style="margin-top:0.7rem;">Gut 1 Std. Puffer in Stuttgart – mit Baby und Gepäck genau richtig. <strong>Sitzplatzreservierung im TGV ist Pflicht</strong> und im Ticket enthalten; früh buchen lohnt sich (Sparpreis Frankreich ab ca. 40&nbsp;€).</p>
-        <p><strong>Alternative:</strong> schon 09:43 ab Stuttgart, an 13:07 – dann bleibt der Dienstagnachmittag frei.</p>
-      </div>
-      <div class="logi-card">
-        <h3>🚄 Rückfahrt <span class="logi-time">Fr 21.08.</span></h3>
-        <div class="logi-leg"><span class="t">12:52 → 16:14</span><span class="d"><strong>Paris Est → Stuttgart Hbf</strong><br />TGV/ICE, 3 Std. 22, direkt</span></div>
-        <div class="logi-leg"><span class="t">ca. 16:33 → 17:30</span><span class="d"><strong>Stuttgart Hbf → Tübingen Hbf</strong><br />RE, ~55 Min., direkt</span></div>
-        <p style="margin-top:0.7rem;">Bei internationalen Zügen <strong>30–40 Min. vor Abfahrt am Gleis</strong> sein. Der Vormittag bleibt frei für Montmartre – spätestens <strong>11:45 Uhr</strong> zurück Richtung Bahnhof.</p>
-        <p><strong>Bitte prüfen:</strong> Diese Rückfahrtszeiten stammen aus dem Standard-Fahrplan; die genaue Freitagsverbindung bitte beim Buchen auf bahn.de bestätigen.</p>
-      </div>
-    </section>
-
     <section class="zones" id="zones"></section>
 
     <template id="zone-template">
@@ -145,6 +89,62 @@
         </div>
       </article>
     </template>
+
+    <section class="logistics">
+      <div class="logi-card">
+        <h3>🚄 Hinfahrt <span class="logi-time">Di 18.08.</span></h3>
+        <div class="logi-leg"><span class="t">11:33 → 12:28</span><span class="d"><strong>Tübingen Hbf → Stuttgart Hbf</strong><br />RE, 55 Min., direkt</span></div>
+        <div class="logi-leg"><span class="t">13:43 → 17:16</span><span class="d"><strong>Stuttgart Hbf → Paris Est</strong><br />TGV/ICE, 3 Std. 33, direkt</span></div>
+        <p style="margin-top:0.7rem;">Gut 1 Std. Puffer in Stuttgart – mit Baby und Gepäck genau richtig. <strong>Sitzplatzreservierung im TGV ist Pflicht</strong> und im Ticket enthalten; früh buchen lohnt sich (Sparpreis Frankreich ab ca. 40&nbsp;€).</p>
+        <p><strong>Alternative:</strong> schon 09:43 ab Stuttgart, an 13:07 – dann bleibt der Dienstagnachmittag frei.</p>
+      </div>
+      <div class="logi-card">
+        <h3>🚄 Rückfahrt <span class="logi-time">Fr 21.08.</span></h3>
+        <div class="logi-leg"><span class="t">12:52 → 16:14</span><span class="d"><strong>Paris Est → Stuttgart Hbf</strong><br />TGV/ICE, 3 Std. 22, direkt</span></div>
+        <div class="logi-leg"><span class="t">ca. 16:33 → 17:30</span><span class="d"><strong>Stuttgart Hbf → Tübingen Hbf</strong><br />RE, ~55 Min., direkt</span></div>
+        <p style="margin-top:0.7rem;">Bei internationalen Zügen <strong>30–40 Min. vor Abfahrt am Gleis</strong> sein. Der Vormittag bleibt frei für Montmartre – spätestens <strong>11:45 Uhr</strong> zurück Richtung Bahnhof.</p>
+        <p><strong>Bitte prüfen:</strong> Diese Rückfahrtszeiten stammen aus dem Standard-Fahrplan; die genaue Freitagsverbindung bitte beim Buchen auf bahn.de bestätigen.</p>
+      </div>
+    </section>
+
+    <section class="intro">
+      <h2>Wie funktioniert dieser Guide?</h2>
+      <ul class="intro-list">
+        <li><strong>Vier Tageskarten</strong> – Ankunftsabend, zwei volle Tage, Abreisevormittag. Dazu eine <strong>Reserve-Karte</strong> für Regen oder Planänderungen.</li>
+        <li><strong>Auf jede Karte tippen</strong> öffnet die Location direkt in Google&nbsp;Maps.</li>
+        <li><strong>Tag öffnen</strong> → unten startet ein Button die ganze Tour als Google-Maps-Route (zu Fuß bzw. mit Metro&nbsp;&amp; Bus).</li>
+        <li><strong>Kinderwagen-Hinweise</strong> auf jeder Karte. <span class="badge stroller-yes">🛒 ok</span> <span class="badge stroller-careful">⚠ mühsam</span> <span class="badge stroller-no">🤱 lieber Trage</span></li>
+        <li><strong>Glutenfreies</strong> ist wie in Berlin grün markiert – pro Tag mindestens eine Adresse.</li>
+      </ul>
+    </section>
+
+    <section class="louvre-status">
+      <h2>🖼️ Louvre-Check <span class="status-pill">Ja – aber nur mit Reservierung</span></h2>
+      <p>Kurz gesagt: Ihr kommt rein, wenn ihr <strong>sofort bucht</strong>. Der Louvre ist an beiden vollen Tagen geöffnet – dienstags wäre er zu, aber da sitzt ihr ohnehin noch im Zug.</p>
+      <div class="louvre-grid">
+        <div class="louvre-box">
+          <h3>Eure Tage</h3>
+          <p><strong>Mi 19.08.: 9–21 Uhr</strong> (Nocturne, langer Abend)<br />
+             <strong>Do 20.08.: 9–18 Uhr</strong><br />
+             Dienstags immer geschlossen. Letzter Einlass 1 Std. vor Schluss.</p>
+        </div>
+        <div class="louvre-box">
+          <h3>Der Haken</h3>
+          <p>Vom <strong>1. Juli bis 31. August 2026 ist eine Reservierung für alle Pflicht</strong> – ohne Zeitfenster kein Einlass. Tickets kommen 90 Tage im Voraus heraus, Sommer-Vormittage sind schnell weg. <strong>Erwachsene 22&nbsp;€ (EU), unter 18 frei.</strong></p>
+        </div>
+        <div class="louvre-box">
+          <h3>Plan B, falls ausgebucht</h3>
+          <p>Mit einer <strong>„Amis du Louvre“-Karte</strong> braucht der Karteninhaber keine Reservierung – und <strong>mittwochs abends (Nocturne) auch die Begleitung nicht</strong>. Mitgliedschaft ab 22&nbsp;€, Einzelkarte 80&nbsp;€. Sonst: Musée d'Orsay als Alternative.</p>
+        </div>
+      </div>
+      <div class="louvre-actions">
+        <a class="louvre-btn" href="https://ticket.louvre.fr/en" target="_blank" rel="noopener">🎟️ Jetzt Zeitfenster buchen</a>
+        <a class="louvre-btn secondary" href="https://www.amisdulouvre.fr/" target="_blank" rel="noopener">Plan B: Amis du Louvre</a>
+      </div>
+      <p style="margin:1rem 0 0; font-size:0.86rem;">
+        <strong>Gut zu wissen:</strong> Die <em>Galerie d'Apollon</em> ist nach dem Einbruch vom Oktober 2025 seit dem 22.07.2026 wieder geöffnet – allerdings ohne die Kronjuwelen, die Vitrinen bleiben leer. Einzelne Säle sind wegen Sanierung zeitweise dicht; die tagesaktuelle Liste steht auf louvre.fr.
+      </p>
+    </section>
 
     <section class="hotels">
       <h2>Hotel-Vorschläge</h2>
