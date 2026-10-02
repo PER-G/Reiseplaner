@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#2a1410" />
   <meta name="description" content="Interaktive Reiseführer für die Familie – Rom, Berlin und China, jeweils mit Karten, Routen und Kinderwagen-Hinweisen." />
-  <title>Reiseführer · Rom, Berlin, Paris, China &amp; Krakau</title>
+  <title>Reiseführer · Rom, Berlin, Paris, China, Krakau &amp; Budapest</title>
   <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -123,6 +123,9 @@
     .city-card.paris::after {
       background: linear-gradient(180deg, rgba(30,13,26,0.15) 0%, rgba(91,42,77,0.42) 45%, rgba(30,13,26,0.90) 100%);
     }
+    .city-card.budapest::after {
+      background: linear-gradient(180deg, rgba(7,29,34,0.15) 0%, rgba(21,83,95,0.42) 45%, rgba(7,29,34,0.90) 100%);
+    }
     .city-card.krakau::after {
       background: linear-gradient(180deg, rgba(13,31,26,0.15) 0%, rgba(36,86,74,0.42) 45%, rgba(13,31,26,0.90) 100%);
     }
@@ -178,6 +181,7 @@
     .china .open-btn { background: #d9a441; }
     .paris .open-btn { background: #d8b56a; }
     .krakau .open-btn { background: #cbb46b; }
+    .budapest .open-btn { background: #d9b45c; }
     .city-card:hover .open-btn { transform: translateX(3px); filter: brightness(1.05); }
 
     footer {
@@ -198,7 +202,7 @@
     <header>
       <div class="kicker">Familien-Reiseführer · mit Baby</div>
       <h1>Wohin geht's?</h1>
-      <p class="sub">Fünf Reisen, ein Prinzip: Gebiete zum Auswählen, Karten zum Antippen, fertige Routen und Kinderwagen-Hinweise auf jeder Station.</p>
+      <p class="sub">Sechs Reisen, ein Prinzip: Gebiete zum Auswählen, Karten zum Antippen, fertige Routen und Kinderwagen-Hinweise auf jeder Station.</p>
     </header>
 
     <nav class="cards">
@@ -258,6 +262,18 @@
           <h2 class="city-name">Kraków</h2>
           <div class="city-dates">25.–31. Oktober 2026</div>
           <p class="city-desc">Eine Woche mit Tram &amp; Bus: Hauptmarkt, Wawel, Kazimierz, Schindler-Fabrik &amp; Wieliczka.</p>
+          <span class="open-btn">Guide öffnen&nbsp;→</span>
+        </div>
+      </a>
+
+      <a class="city-card budapest" href="budapest/index.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Sz%C3%A9chenyi_Chain_Bridge_in_Budapest_at_night.jpg/1280px-Sz%C3%A9chenyi_Chain_Bridge_in_Budapest_at_night.jpg" alt="Budapest – Kettenbrücke bei Nacht" loading="lazy" />
+        <div class="card-content">
+          <span class="city-tag">Ungarn</span>
+          <div class="flag">🌉</div>
+          <h2 class="city-name">Budapest</h2>
+          <div class="city-dates">23.–30. Oktober 2026</div>
+          <p class="city-desc">Sechs Tage an der Donau: Burgberg, Zitadelle, Thermalbäder, Gauguin-Ausstellung &amp; Food-Spots.</p>
           <span class="open-btn">Guide öffnen&nbsp;→</span>
         </div>
       </a>
