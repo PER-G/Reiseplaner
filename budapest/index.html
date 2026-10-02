@@ -32,6 +32,63 @@
   </header>
 
   <main>
+    <section class="travel-summary">
+      <details class="travel-details">
+        <summary>
+          <span class="ts-icon">✈️</span>
+          <span class="ts-title">Flug &amp; Reisedaten</span>
+          <span class="ts-chevron">▾</span>
+        </summary>
+        <div class="ts-body">
+
+          <div class="flights">
+            <div class="flight">
+              <div class="fl-head"><span class="fl-dir">🛫 Hinflug</span><span class="fl-no">EW 2784</span></div>
+              <div class="fl-route">
+                <div class="fl-point"><b>19:00</b><span>Stuttgart (STR)</span></div>
+                <div class="fl-arrow">→<small>1 Std. 25</small></div>
+                <div class="fl-point"><b>20:25</b><span>Budapest (BUD)</span></div>
+              </div>
+              <div class="fl-date">Freitag, 23.10.2026 · Eurowings · Tarif SMART</div>
+            </div>
+            <div class="flight">
+              <div class="fl-head"><span class="fl-dir">🛬 Rückflug</span><span class="fl-no">EW 2785</span></div>
+              <div class="fl-route">
+                <div class="fl-point"><b>20:40</b><span>Budapest (BUD)</span></div>
+                <div class="fl-arrow">→<small>1 Std. 30</small></div>
+                <div class="fl-point"><b>22:10</b><span>Stuttgart (STR)</span></div>
+              </div>
+              <div class="fl-date">Freitag, 30.10.2026 · Eurowings · Tarif SMART</div>
+            </div>
+          </div>
+
+          <div class="fare-note">
+            <strong>Tarif SMART, 5 Reisende (4 Erwachsene + Baby):</strong> je 23&nbsp;kg Aufgabegepäck, 8&nbsp;kg großes Handgepäck plus kleine Tasche (max.&nbsp;40×30×25&nbsp;cm), Sitzplatzreservierung und Online-Check-in inklusive. <strong>Umbuchung und Stornierung sind nicht möglich.</strong>
+          </div>
+
+          <div class="logistics">
+            <div class="logi-card">
+              <h3>🛬 Ankunft <span class="logi-time">Fr 23.10.</span></h3>
+              <div class="logi-leg"><span class="t">19:00 → 20:25</span><span class="d"><strong>Stuttgart → Budapest</strong><br />EW 2784, Flugzeit 1 Std. 25</span></div>
+              <div class="logi-leg"><span class="t">100E</span><span class="d"><strong>Flughafen → Kálvin tér</strong><br />30–45 Min., fährt auch nachts</span></div>
+              <div class="logi-leg"><span class="t">M3</span><span class="d"><strong>Kálvin tér → Corvin-negyed</strong><br />eine Station, direkt vor die Unterkunft</span></div>
+              <p style="margin-top:0.7rem;">Mit Gepäckausgabe und Fahrt seid ihr realistisch <strong>gegen 22 Uhr</strong> in der Wohnung – plant für den Abend nur noch Essen ein.</p>
+              <p><strong>Keine Zeitverschiebung</strong> – Ungarn liegt in derselben Zeitzone wie Deutschland.</p>
+              <p><strong>Nationalfeiertag:</strong> Der 23. Oktober erinnert an den Aufstand von 1956. Geschäfte sind zu, Restaurants aber geöffnet. Rund um das Parlament kann es Veranstaltungen und Absperrungen geben.</p>
+            </div>
+            <div class="logi-card">
+              <h3>🛫 Abreise <span class="logi-time">Fr 30.10.</span></h3>
+              <div class="logi-leg"><span class="t">bis ~16:00</span><span class="d"><strong>Halber Tag frei</strong><br />Margareteninsel oder Markthalle, früh Mittagessen</span></div>
+              <div class="logi-leg"><span class="t">~16:45</span><span class="d"><strong>Mit M3 + 100E zum Flughafen</strong><br />spätestens 18:00 Uhr am Terminal</span></div>
+              <div class="logi-leg"><span class="t">20:40 → 22:10</span><span class="d"><strong>Rückflug nach Stuttgart</strong><br />EW 2785, Flugzeit 1 Std. 30</span></div>
+              <p style="margin-top:0.7rem;">Gepäck morgens an der Rezeption einlagern, dann bleibt der Vormittag komplett frei.</p>
+            </div>
+          </div>
+
+        </div>
+      </details>
+    </section>
+
     <section class="zones" id="zones"></section>
 
     <template id="zone-template">
@@ -89,24 +146,6 @@
         </div>
       </article>
     </template>
-
-    <section class="logistics">
-      <div class="logi-card">
-        <h3>🛬 Ankunft <span class="logi-time">Fr 23.10.</span></h3>
-        <div class="logi-leg"><span class="t">19:00</span><span class="d"><strong>Stuttgart → Budapest</strong><br />Flugzeit ca. 1 Std. 40 → Landung gegen 20:40</span></div>
-        <div class="logi-leg"><span class="t">100E</span><span class="d"><strong>Flughafen → Kálvin tér</strong><br />30–45 Min., fährt auch nachts</span></div>
-        <div class="logi-leg"><span class="t">M3</span><span class="d"><strong>Kálvin tér → Corvin-negyed</strong><br />eine Station, direkt vor die Unterkunft</span></div>
-        <p style="margin-top:0.7rem;"><strong>Keine Zeitverschiebung</strong> – Ungarn liegt in derselben Zeitzone wie Deutschland.</p>
-        <p><strong>Nationalfeiertag:</strong> Der 23. Oktober erinnert an den Aufstand von 1956. Geschäfte sind zu, Restaurants aber geöffnet. Rund um das Parlament kann es Veranstaltungen und Absperrungen geben.</p>
-      </div>
-      <div class="logi-card">
-        <h3>🛫 Abreise <span class="logi-time">Fr 30.10.</span></h3>
-        <div class="logi-leg"><span class="t">bis ~15:00</span><span class="d"><strong>Halber Tag frei</strong><br />Margareteninsel oder Markthalle, früh Mittagessen</span></div>
-        <div class="logi-leg"><span class="t">~16:15</span><span class="d"><strong>Mit dem 100E zum Flughafen</strong><br />spätestens 17:30 Uhr am Terminal</span></div>
-        <div class="logi-leg"><span class="t">20:00</span><span class="d"><strong>Rückflug nach Stuttgart</strong></span></div>
-        <p style="margin-top:0.7rem;">Gepäck morgens an der Hotelrezeption einlagern, dann bleibt der Vormittag komplett frei.</p>
-      </div>
-    </section>
 
     <section class="intro">
       <h2>Wie funktioniert dieser Guide?</h2>

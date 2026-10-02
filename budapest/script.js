@@ -609,7 +609,7 @@ const ZONES = [
     summary: "Ein ruhiger Vormittag auf der Margareteninsel oder in der Markthalle, früh Mittagessen – und mit genug Puffer zum Flughafen.",
     walkFromHotel: "Tram 4/6 direkt zur Insel, dann M3 + 100E",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Budapest_Donauinsel_2.jpg/1280px-Budapest_Donauinsel_2.jpg",
-    transportNote: "<strong>Zeitplan:</strong> Abflug 20:00 Uhr → spätestens 17:30 Uhr am Flughafen → M3 eine Station bis Kálvin tér, dort in den 100E (ca. 40 Min. plus Puffer) → <strong>gegen 16:00 Uhr von der Unterkunft los</strong>. Bis etwa 15 Uhr habt ihr also frei. Praktisch: Die <strong>Tram 4/6 fährt ab Corvin-negyed ohne Umsteigen bis <em>Margitsziget</em></strong>, mitten auf der Margaretenbrücke – die Insel ist autofrei, flach und hat breite Wege, perfekt zum Schieben. Wer lieber in der Stadt bleibt: Die Hold utcai Vásárcsarnok ist eine kleine Markthalle mit sehr gutem Mittagstisch (M3 bis Arany János utca).",
+    transportNote: "<strong>Zeitplan:</strong> Abflug 20:40 Uhr (EW&nbsp;2785) → spätestens 18:00 Uhr am Flughafen → M3 eine Station bis Kálvin tér, dort in den 100E (ca. 40 Min. plus Puffer) → <strong>gegen 16:45 Uhr von der Unterkunft los</strong>. Bis etwa 16 Uhr habt ihr also frei. Praktisch: Die <strong>Tram 4/6 fährt ab Corvin-negyed ohne Umsteigen bis <em>Margitsziget</em></strong>, mitten auf der Margaretenbrücke – die Insel ist autofrei, flach und hat breite Wege, perfekt zum Schieben. Wer lieber in der Stadt bleibt: Die Hold utcai Vásárcsarnok ist eine kleine Markthalle mit sehr gutem Mittagstisch (M3 bis Arany János utca).",
     route: { fromBase: true, mode: "transit" },
     sights: [
       {
