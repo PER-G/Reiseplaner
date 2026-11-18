@@ -4,9 +4,9 @@
    ============================================================ */
 
 /* Ausgangspunkte je Ort – die Routen starten am jeweiligen Liegeplatz
-   bzw. in Hamburg (Hotel noch offen) am Hauptbahnhof. */
+   bzw. in Hamburg am Hotel (Novotel Hamburg City Alster). */
 const BASES = {
-  hamburg: { name: "Hamburg Hauptbahnhof", hint: "am Hamburger Hauptbahnhof (Hotel noch offen)", mapsName: "Hamburg Hauptbahnhof", lat: 53.5530, lng: 10.0068 },
+  hamburg: { name: "Novotel Hamburg City Alster", hint: "an eurem Hotel (Novotel, Lübecker Straße)", mapsName: "Novotel Hamburg City Alster, Lübecker Straße 3, 22087 Hamburg", lat: 53.5591, lng: 10.0248 },
   steinwerder: { name: "Cruise Center Steinwerder", hint: "am Cruise Center Steinwerder", mapsName: "Cruise Center Steinwerder, Buchheisterstraße 16, Hamburg", lat: 53.5294, lng: 9.9613 },
   kopenhagen: { name: "Oceankaj Kopenhagen", hint: "am Liegeplatz Oceankaj", mapsName: "Oceankaj, København", lat: 55.7181, lng: 12.6291 },
   oslo: { name: "Kreuzfahrt-Liegeplatz Oslo", hint: "am Liegeplatz Oslo", mapsName: "Søndre Akershuskai, Oslo", lat: 59.9047, lng: 10.7392 },
@@ -99,11 +99,11 @@ const ZONES = [
     tag: "Do 31.12. · Anreise",
     title: "Ankunft & Silvester in Hamburg",
     summary: "Morgens Flug nach Hamburg, Gepäck abstellen, Rathaus und Alster ansehen, mittags ausruhen – und abends ins neue Jahr: Feuerwerk über Elbe und Alster.",
-    walkFromHotel: "S1 vom Flughafen, in der Innenstadt alles zu Fuß",
+    walkFromHotel: "Ab Hotel ca. 25 Min. zu Fuß oder U3 bis Rathaus",
     image: IMG.landungsbruecken,
     base: "hamburg",
     noteLabel: "🚆 Anreise &amp; Silvester",
-    transportNote: "Flug um 07:00 Uhr ab Stuttgart, gut eine Stunde später seid ihr in Hamburg. Vom Flughafen fährt die <strong>S1</strong> in rund 25 Minuten zum Hauptbahnhof bzw. Jungfernstieg. Da das Hotel noch offen ist, starten die Routen vorläufig am <strong>Hauptbahnhof</strong>. <strong>Silvester mit Kleinkind:</strong> An den Landungsbrücken und am Stintfang ist der Blick am besten, dort ist es aber auch am vollsten. Ruhiger ist die <strong>Binnenalster</strong>. Von den U-Bahn-Stationen Landungsbrücken und Baumwall sieht man wegen Sichtblenden nichts, und der Alte Elbtunnel ist nachts gesperrt. Ob es 2026/27 Feuerwerks-Verbotszonen gibt, steht kurz vorher auf hamburg.de.",
+    transportNote: "Flug um 07:00 Uhr ab Stuttgart, Landung gegen 08:10 Uhr. Euer Hotel ist das <strong>Novotel Hamburg City Alster</strong> (Lübecker Straße 3) direkt an der U-Bahn-Station <em>Lübecker Straße</em>. Vom Flughafen: <strong>Taxi</strong> in rund 20–25 Minuten (mit Gepäck am bequemsten) oder <strong>S1</strong> bis Hauptbahnhof und weiter mit der <strong>U3</strong> zwei Stationen bis <em>Lübecker Straße</em>. <strong>Check-in erst ab 15 Uhr</strong> – das Gepäck könnt ihr vormittags an der Rezeption abgeben und nach einem frühen Zimmer fragen. In die Innenstadt sind es rund 25 Minuten zu Fuß über St. Georg oder wenige Minuten mit der U3. <strong>Silvester mit Kleinkind:</strong> An den Landungsbrücken und am Stintfang ist der Blick am besten, dort ist es aber auch am vollsten. Ruhiger ist die <strong>Binnenalster</strong>. Von den U-Bahn-Stationen Landungsbrücken und Baumwall sieht man wegen Sichtblenden nichts, und der Alte Elbtunnel ist nachts gesperrt. Ob es 2026/27 Feuerwerks-Verbotszonen gibt, steht kurz vorher auf hamburg.de.",
     route: { fromBase: true, mode: "walking" },
     sights: [
       {
@@ -185,12 +185,12 @@ const ZONES = [
     tag: "Fr 01.01. · Neujahr",
     title: "Elbphilharmonie, Speicherstadt & Miniatur Wunderland",
     summary: "Ausschlafen, dann auf die Plaza der Elbphilharmonie, durch die HafenCity und die Speicherstadt – und um 13 Uhr ins Miniatur Wunderland.",
-    walkFromHotel: "U4 oder 20 Min. zu Fuß ab Hbf, dann alles zu Fuß",
+    walkFromHotel: "U3 ab Lübecker Straße direkt bis Baumwall",
     image: IMG.speicherstadt,
     base: "hamburg",
     noteLabel: "🗓️ Neujahrstag",
-    transportNote: "Am Neujahrstag sind Läden geschlossen und viele Lokale öffnen spät oder gar nicht – plant das Essen deshalb grob vor. Die <strong>U4</strong> fährt bis <em>Überseequartier</em> mitten in die HafenCity. <strong>Miniatur Wunderland um 13:00 Uhr:</strong> Tickets gibt es nur mit Zeitfenster – laut eurem Reiseplan ist die Buchungsbestätigung noch offen, das bitte unbedingt vorher erledigen. Rechnet mit 2–3 Stunden. Die Plaza der Elbphilharmonie ist mit Gratis-Ticket vor Ort zugänglich (online gegen kleine Gebühr reservierbar); ob und wie lange sie an Neujahr öffnet, steht auf elbphilharmonie.de.",
-    route: { fromBase: true, mode: "walking" },
+    transportNote: "Am Neujahrstag sind Läden geschlossen und viele Lokale öffnen spät oder gar nicht – plant das Essen deshalb grob vor. Vom Hotel fährt die <strong>U3</strong> ab <em>Lübecker Straße</em> ohne Umsteigen bis <em>Baumwall</em> – gegenüber der Elbphilharmonie (ca. 15 Min.). <strong>Miniatur Wunderland um 13:00 Uhr:</strong> Tickets gibt es nur mit Zeitfenster – laut eurem Reiseplan ist die Buchungsbestätigung noch offen, das bitte unbedingt vorher erledigen. Rechnet mit 2–3 Stunden. Die Plaza der Elbphilharmonie ist mit Gratis-Ticket vor Ort zugänglich (online gegen kleine Gebühr reservierbar); ob und wie lange sie an Neujahr öffnet, steht auf elbphilharmonie.de.",
+    route: { fromBase: true, mode: "transit" },
     sights: [
       {
         name: "Elbphilharmonie – Plaza",
@@ -271,11 +271,11 @@ const ZONES = [
     tag: "Sa 02.01. · Einschiffung",
     title: "Hafen, Elbtunnel & Leinen los",
     summary: "Vormittags Hafenrundfahrt und Alter Elbtunnel, dann mit dem Gepäck zum Cruise Center Steinwerder. Check-in 15–16 Uhr, um 19 Uhr legt die AIDAnova ab.",
-    walkFromHotel: "U3/S1 zu den Landungsbrücken, Taxi zum Terminal",
+    walkFromHotel: "U3 direkt zu den Landungsbrücken, Taxi zum Terminal",
     image: IMG.aidanova,
     base: "hamburg",
     noteLabel: "🚢 Einschiffung",
-    transportNote: "<strong>Check-in 15:00–16:00 Uhr</strong> am <strong>Cruise Center Steinwerder</strong> (Kronprinzkai, Buchheisterstraße 16, 20457 Hamburg). Das Terminal liegt auf der Südseite der Elbe – mit Koffern und Kinderwagen ist ein <strong>Taxi</strong> die einfachste Lösung (ab Innenstadt ca. 15–20 Min.). Die Vormittagsrunde endet am Alten Elbtunnel; von dessen Südausgang ist das Terminal noch rund 2 km entfernt, daher steht es nicht in der Fußroute. Plant den Check-in lieber früh im Zeitfenster, damit ihr die Kabine in Ruhe beziehen könnt. <strong>Abfahrt 19:00 Uhr</strong> – das Auslaufen bei Nacht ist ein Höhepunkt.",
+    transportNote: "<strong>Ablauf:</strong> Im Novotel ist <strong>Check-out bis 12 Uhr</strong> – also morgens auschecken und die Koffer an der Rezeption lassen. Mit der <strong>U3</strong> geht es ohne Umsteigen von <em>Lübecker Straße</em> zu den <em>Landungsbrücken</em> (ca. 17 Min.). Gegen 13:30 Uhr zurück zum Hotel, Gepäck holen und mit dem <strong>Taxi</strong> zum Terminal (ca. 20–25 Min.). <strong>Check-in 15:00–16:00 Uhr</strong> am <strong>Cruise Center Steinwerder</strong> (Kronprinzkai, Buchheisterstraße 16, 20457 Hamburg) auf der Südseite der Elbe. Die Vormittagsrunde endet am Alten Elbtunnel; von dessen Südausgang ist das Terminal noch rund 2 km entfernt, daher steht es nicht in der Fußroute. Plant den Check-in lieber früh im Zeitfenster, damit ihr die Kabine in Ruhe beziehen könnt. <strong>Abfahrt 19:00 Uhr</strong> – das Auslaufen bei Nacht ist ein Höhepunkt.",
     route: { fromBase: true, mode: "transit" },
     sights: [
       {
@@ -285,8 +285,8 @@ const ZONES = [
         image: IMG.landungsbruecken,
         lat: 53.5456, lng: 9.9704,
         stroller: "careful",
-        time: "ca. 10:00",
-        transit: "U3/S1/S3 Landungsbrücken",
+        time: "ca. 10:30",
+        transit: "U3 ab Lübecker Straße, ohne Umsteigen",
         badges: ["Witterungsabhängig", "Barkasse: Kinderwagen falten"],
       },
       {
@@ -297,7 +297,7 @@ const ZONES = [
         lat: 53.5459, lng: 9.9666,
         stroller: "yes",
         viewpoint: true,
-        time: "ca. 11:30",
+        time: "ca. 12:00",
         badges: ["Kostenlos für Fußgänger", "Aufzüge", "Nachts gesperrt"],
       },
       {
@@ -308,7 +308,7 @@ const ZONES = [
         lat: 53.5294, lng: 9.9613,
         stroller: "yes",
         time: "15:00–16:00 Check-in",
-        badges: ["Ausweise bereithalten", "Taxi mit Gepäck"],
+        badges: ["Ausweise bereithalten", "Taxi ab Hotel ca. 20–25 Min."],
         inRoute: false,
       },
       {
@@ -980,7 +980,7 @@ const ZONES = [
     image: IMG.cruisecenter,
     base: "steinwerder",
     noteLabel: "✈️ Heimreise",
-    transportNote: "<strong>Zeitplan:</strong> Ankunft 08:00 Uhr, Ausschiffung gestaffelt nach Zeitfenster. Für den Flug um 13:30 Uhr solltet ihr spätestens gegen <strong>11:30 Uhr am Flughafen</strong> sein. Vom Cruise Center Steinwerder ist ein <strong>Taxi</strong> mit Gepäck und Kinderwagen die einfachste Lösung – je nach Verkehr 30–40 Minuten. Mit Bus und S-Bahn dauert es deutlich länger und ist mit Koffern umständlich. Plant das Frühstück früh und wählt ein frühes Ausschiffungsfenster, dann bleibt genug Puffer. Laut eurem Reiseplan ist der Transfer zum Flughafen noch offen – vorher klären.",
+    transportNote: "<strong>Zeitplan:</strong> Ankunft 08:00 Uhr, Ausschiffung gestaffelt nach Zeitfenster. Für den Flug um 13:30 Uhr solltet ihr spätestens gegen <strong>11:30 Uhr am Flughafen</strong> sein. Vom Cruise Center Steinwerder ist ein <strong>Taxi</strong> mit Gepäck und Kinderwagen die einfachste Lösung – je nach Verkehr 30–40 Minuten. Mit Bus und S-Bahn dauert es deutlich länger und ist mit Koffern umständlich. Plant das Frühstück früh und wählt ein frühes Ausschiffungsfenster, dann bleibt genug Puffer. Landung in Stuttgart um 14:40 Uhr (Eurowings EW 2043).",
     route: { fromBase: true, mode: "driving" },
     sights: [
       {
@@ -997,7 +997,7 @@ const ZONES = [
       {
         name: "Flughafen Hamburg",
         mapsName: "Hamburg Airport, Flughafenstraße 1-3, Hamburg",
-        desc: "Rückflug um 13:30 Uhr nach Stuttgart. Mit Kleinkind lohnt sich ein großzügiger Puffer für Gepäckaufgabe und Sicherheitskontrolle.",
+        desc: "Rückflug mit Eurowings EW 2043 um 13:30 Uhr, Landung in Stuttgart um 14:40 Uhr. Mit Kleinkind lohnt sich ein großzügiger Puffer für Gepäckaufgabe und Sicherheitskontrolle.",
         illu: { emoji: "✈️", label: "Rückflug · 13:30", from: "#27306b", to: "#4fd1a5" },
         lat: 53.6304, lng: 9.9882,
         stroller: "yes",
